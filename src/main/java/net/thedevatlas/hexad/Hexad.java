@@ -11,6 +11,6 @@ public class Hexad implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("The Dev Atlas - Init Hexad Program!");
+		LOGGER.info("The Dev Atlas - Init Hexad Program! - Online");
 	}
 }
