@@ -197,7 +197,7 @@ public class DiscordBot extends ListenerAdapter{
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine " + blockName).setEmbeds(embed.build()).queue();
                                     mc.player.sendMessage(Text.of("#mine " + blockName));
                                 } else {
-                                    // If the block name is missing, reply with a message indicating that
+                                    // If the block name is missing, reply with a message indicating that.
                                     message.reply("Missing block name. Please specify a block to mine.");
                                 }
                                 break;
