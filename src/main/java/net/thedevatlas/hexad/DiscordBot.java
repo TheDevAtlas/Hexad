@@ -13,6 +13,11 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.text.Text;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 //import javax.annotation.Nonnull;
 import java.awt.*;
@@ -25,11 +30,24 @@ import java.util.EnumSet;
 public class DiscordBot extends ListenerAdapter{
     // See https://emojipedia.org/red-heart/ and find the codepoints
     public static final Emoji HEART = Emoji.fromUnicode("U+2764");
-
+    private String status = "I Am Not Currently Doing Anything.";
     public static JDA jda;
-
+    static String username = MinecraftClient.getInstance().getSession().getUsername();
+    private static LocalDateTime startTime;
+    MinecraftClient mc = MinecraftClient.getInstance();
+    public static String getRuntime() {
+        LocalDateTime currentTime = LocalDateTime.now();
+        long seconds = java.time.Duration.between(startTime, currentTime).getSeconds();
+        long hours = seconds / 3600;
+        long minutes = (seconds % 3600) / 60;
+        seconds = seconds % 60;
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
+    }
     public static void RunBot() throws IOException
     {
+        startTime = LocalDateTime.now();
+
+
         // Possible ways to provide the token:
 
         // 1. From a file:
@@ -112,6 +130,8 @@ public class DiscordBot extends ListenerAdapter{
             // jda.getSelfUser().getMutualGuilds().getFirst().getTextChannelById(0).sendMessage("I have awaken, father").queue();
             //jda.getSelfUser().getMutualGuilds().get(0).getTextChannelById(0).sendMessage("I have awaken, father").queue();
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("I have awaken, father").queue();
+            jda.awaitReady();
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Logged into: " + username).queue();
         }
         catch (InterruptedException e)
         {
@@ -150,23 +170,56 @@ public class DiscordBot extends ListenerAdapter{
 
                 // Send Back A Response To User //
                 // bot.getSelfUser().getGuildById(...).getTextChannelById(...).sendMessage(...).queue()
+                String[] parts = message.getContentDisplay().split(" ");
 
-                if(message.getContentDisplay().contains("mine"))
-                {
-                    // Set Status //
-                    jda.getPresence().setActivity(Activity.customStatus("Mining"));
+                // Check if the message was sent in a guild/server
+                if (event.isFromGuild()) {
+                    // Extract the bot's name from the JDA instance
+                    String botName = jda.getSelfUser().getName();
+                    if (parts.length >= 2 && parts[0].equalsIgnoreCase(botName)) {
+                        String command = parts[1].toLowerCase(); // Extract the command
+                        switch (command) {
+                            case "mine":
+                                // Check if the command has the block name
+                                if (parts.length >= 3) {
+                                    // Extract the block name from the command
+                                    String blockName = parts[2].toLowerCase(); // Assuming the block name is the third part of the command
+                                    // Set the activity to mining the specified block
+                                    jda.getPresence().setActivity(Activity.customStatus("Mining " + blockName));
+                                    status = "I Am Currently Mining " + blockName;
 
-                    // Send Message //
-                    EmbedBuilder embed = new EmbedBuilder();
-                    embed.setTitle("Mining");
-                    embed.setDescription("I yurn for the mines");
-                    embed.setColor(new Color(255,0,0));
+                                    // Send Message //
+                                    EmbedBuilder embed = new EmbedBuilder();
+                                    embed.setTitle("Mining");
+                                    embed.setDescription("I yearn for the mines of " + blockName);
+                                    embed.setColor(new Color(255,0,0));
 
-                    //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
-                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine").setEmbeds(embed.build()).queue();
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine " + blockName).setEmbeds(embed.build()).queue();
+                                    mc.player.sendMessage(Text.of("#mine " + blockName));
+                                } else {
+                                    // If the block name is missing, reply with a message indicating that
+                                    message.reply("Missing block name. Please specify a block to mine.");
+                                }
+                                break;
+                            case "status":
+                                String runtime = getRuntime();
+                                String statusWithRuntime = status + "\nRuntime: " + runtime;
+                                // Send Message //
+                                EmbedBuilder embedstatus = new EmbedBuilder();
+                                embedstatus.setTitle("Current Status");
+                                embedstatus.setDescription(statusWithRuntime);
+                                embedstatus.setColor(new Color(255,0,0));
 
-
-                    //jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("father, I yurn for the mines").queue();
+                                //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
+                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Status").setEmbeds(embedstatus.build()).queue();
+                                break;
+                            case "stop":
+                                message.reply("I Have Stopped My Current Task.");
+                                status = "I Am Not Currently Doing Anything.";
+                                mc.player.sendMessage(Text.of("#cancel"));
+                                break;
+                        }
+                    }
                 }
             }
             else if(!author.isBot())
