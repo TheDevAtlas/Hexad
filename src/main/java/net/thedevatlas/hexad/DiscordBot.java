@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.ChannelType;
+import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.entities.channel.unions.MessageChannelUnion;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -25,22 +26,26 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import java.awt.*;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.EnumSet;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.stream.Collectors;
+
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 
-public class DiscordBot extends ListenerAdapter{
+public class DiscordBot extends ListenerAdapter {
     public static final Emoji HEART = Emoji.fromUnicode("U+2764");
     private String status = "I Am Not Currently Doing Anything.";
     public static JDA jda;
     public static MinecraftClient client;
     private static LocalDateTime startTime;
     MinecraftClient mc = MinecraftClient.getInstance();
+
     public static String getRuntime() {
         LocalDateTime currentTime = LocalDateTime.now();
         long seconds = java.time.Duration.between(startTime, currentTime).getSeconds();
@@ -49,8 +54,8 @@ public class DiscordBot extends ListenerAdapter{
         seconds = seconds % 60;
         return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
-    public static void RunBot() throws IOException
-    {
+
+    public static void RunBot() throws IOException {
         startTime = LocalDateTime.now();
         String token = "MTIyOTk0ODY0NDc5MTE2MDg5Mg.Gm3K6_.8BOr2edNcooPGV1gTlyiiGO4LaMUEmc9MbtKmU";
         EnumSet<GatewayIntent> intents = EnumSet.of(
@@ -61,69 +66,65 @@ public class DiscordBot extends ListenerAdapter{
                 GatewayIntent.DIRECT_MESSAGE_REACTIONS
         );
 
-        try
-        {
+        try {
             jda = JDABuilder.createLight(token, intents)
                     .addEventListeners(new DiscordBot())
                     .setActivity(Activity.customStatus("Ready and Willing"))
                     .build();
-            jda.getRestPing().queue(ping ->
-                    System.out.println("Logged in with ping: " + ping)
-            );
+            //jda.getRestPing().queue(ping ->
+            //        System.out.println("Logged in with ping: " + ping)
+            //);
 
             jda.awaitReady();
             String botName = jda.getSelfUser().getName();
-            //System.out.println("Guilds: " + jda.getGuildCache().size());
             String username = MinecraftClient.getInstance().getSession().getUsername();
-            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("I have awaken, father").queue();
-            jda.awaitReady();
-            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Logged into: " + username).queue();
-
-
+            String combinedMessage = "I have awaken, father\nLogged into: " + username;
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage(combinedMessage).queue();
+            String channelId = "1229958021489102899";
+            TextChannel channel = jda.getGuildById("1229946274908864543").getTextChannelById(channelId);
+            List<Message> botMessages = channel.getIterableHistory().complete().stream()
+                    .filter(message -> message.getAuthor().getId().equals(jda.getSelfUser().getId()))
+                    .collect(Collectors.toList());
+            for (Message botMessage : botMessages) {
+                botMessage.delete().queue();
+            }
             EmbedBuilder embed = new EmbedBuilder();
             embed.setTitle(botName + "'s Control Panel");
-            //embed.setThumbnail("Apollo.png");
             embed.setColor(0x42b580);
             embed.setDescription("Here's My Available Commands");
             embed.addField("Stop", "Stops The Current Task", true);
             embed.addField("Status", "Returns The Bots Status", true);
             embed.setFooter("Made By: thedevatlas And swig4");
-
             Button button = Button.success("Stop", "Stop");
             Button button2 = Button.success("Status", "Status");
-            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).setActionRow(button, button2).queue();
+            channel.sendMessageEmbeds(embed.build()).setActionRow(button, button2).queue();
             ClientPlayConnectionEvents.JOIN.register((h, sender, c) -> {
-                if(client.player != null) {
+                if (client.player != null) {
                     //handler.sendChatMessage("#mine " + blockName);
                     client = c;
                 }
             });
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
     }
 
     @Override
-    public void onMessageReceived(MessageReceivedEvent event)
-    {
+    public void onMessageReceived(MessageReceivedEvent event) {
         User author = event.getAuthor();
         MessageChannelUnion channel = event.getChannel();
         Message message = event.getMessage();
-        if (event.isFromGuild())
-        {
-            System.out.printf("[%s] [%#s] %#s: %s\n",
-                    event.getGuild().getName(),
-                    channel,
-                    author,
-                    message.getContentDisplay()
-            );
+        if (event.isFromGuild()) {
+            //System.out.printf("[%s] [%#s] %#s: %s\n",
+            //        event.getGuild().getName(),
+            //        channel,
+            //        author,
+            //        message.getContentDisplay()
+            //);
 
-            if(author.getName().equals("thedevatlas") || author.getName().equals("swig4"))
-            {
-                System.out.println(author.getName() + " : Can Run Commands");
+            if (author.getName().equals("thedevatlas") || author.getName().equals("swig4")) {
+                //System.out.println(author.getName() + " : Can Run Commands");
                 // bot.getSelfUser().getGuildById(...).getTextChannelById(...).sendMessage(...).queue()
                 String[] parts = message.getContentDisplay().split(" ");
                 if (event.isFromGuild()) {
@@ -143,7 +144,7 @@ public class DiscordBot extends ListenerAdapter{
                                     embed.setFooter("Made By: thedevatlas And swig4");
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).queue();
                                     //handler = new ClientPlayNetworkHandler(new MinecraftClient(new RunArgs()), new ClientConnection(), new ClientConnectionState());
-                                    client.player.sendMessage(Text.literal("#mine " + blockName),false);
+                                    client.player.sendMessage(Text.literal("#mine " + blockName), false);
                                 } else {
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.").queue();
                                 }
@@ -159,6 +160,11 @@ public class DiscordBot extends ListenerAdapter{
                                 embedstatus.setFooter("Made By: thedevatlas And swig4");
                                 //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embedstatus.build()).queue();
+
+
+
+
+
                                 break;
                             case "stop":
                                 jda.getPresence().setActivity(Activity.customStatus("Ready and Willing"));
@@ -175,39 +181,75 @@ public class DiscordBot extends ListenerAdapter{
                                         handler.sendChatMessage("#cancel");
                                     }
                                 });*/
-                                client.player.sendMessage(Text.literal("#stop"),false);
+                                client.player.sendMessage(Text.literal("#stop"), false);
                                 break;
                         }
                     }
                 }
-            }
-            else if(!author.isBot())
-            {
-                System.out.println(author.getName() + " : Can Not Run Commands");
+            } else if (!author.isBot()) {
+                //System.out.println(author.getName() + " : Can Not Run Commands");
                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("you are not father").queue();
             }
-        }
-        else
-        {
+        } else {
             System.out.printf("[direct] %#s: %s\n",
                     author,
                     message.getContentDisplay()
             );
         }
-        if (channel.getType() == ChannelType.TEXT)
-        {
+        if (channel.getType() == ChannelType.TEXT) {
             System.out.println("The channel topic is " + channel.asTextChannel().getTopic());
         }
 
-        if (channel.getType().isThread())
-        {
-            System.out.println("This thread is part of channel #" +
-                    channel.asThreadChannel()
-                            .getParentChannel()
-                            .getName()
-            );
+        if (channel.getType().isThread()) {
+            //System.out.println("This thread is part of channel #" +
+            //        channel.asThreadChannel()
+            //                .getParentChannel()
+            //                .getName()
+            //);
         }
     }
 
+    @Override
+    public void onButtonInteraction(ButtonInteractionEvent event) {
+        String buttonId = event.getComponentId();
+        switch (buttonId) {
+            case "Stop":
+                stop(event); // Pass the event to the stop method
+                break;
+            case "Status":
+                status(event); // Pass the event to the status method
+                break;
+            default:
+                // Handle unknown button clicks
+                event.reply("Unknown button clicked!").queue();
+        }
+    }
+
+    public void status(ButtonInteractionEvent event) {
+        String username = MinecraftClient.getInstance().getSession().getUsername();
+        String runtime = getRuntime();
+        String statusWithRuntime = status + "\nRuntime: " + runtime + "\nCurrent Account: " + username;
+
+        EmbedBuilder embed = new EmbedBuilder();
+        embed.setTitle("Current Status");
+        embed.setDescription(statusWithRuntime);
+        embed.setColor(Color.GREEN);
+        embed.setFooter("Made By: thedevatlas And swig4");
+
+        event.replyEmbeds(embed.build()).setEphemeral(true).queue();
+    }
+
+    public void stop(ButtonInteractionEvent event) {
+        EmbedBuilder embed = new EmbedBuilder();
+        embed.setTitle("Stop");
+        embed.setDescription("I Have Stopped My Current Task");
+        embed.setColor(Color.RED);
+        embed.setFooter("Made By: thedevatlas And swig4");
+
+        event.replyEmbeds(embed.build()).setEphemeral(true).queue();
+
+        status = "I Am Not Currently Doing Anything.";
+        client.player.sendMessage(Text.literal("#stop"), false);
+    }
 }
 
