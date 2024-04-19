@@ -124,8 +124,7 @@ public class DiscordBot extends ListenerAdapter {
             //);
 
             if (author.getName().equals("thedevatlas") || author.getName().equals("swig4")) {
-                //System.out.println(author.getName() + " : Can Run Commands");
-                // bot.getSelfUser().getGuildById(...).getTextChannelById(...).sendMessage(...).queue()
+                // System.out.println(author.getName() + " : Can Run Commands");
                 String[] parts = message.getContentDisplay().split(" ");
                 if (event.isFromGuild()) {
                     String botName = jda.getSelfUser().getName();
@@ -160,11 +159,6 @@ public class DiscordBot extends ListenerAdapter {
                                 embedstatus.setFooter("Made By: thedevatlas And swig4");
                                 //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embedstatus.build()).queue();
-
-
-
-
-
                                 break;
                             case "stop":
                                 jda.getPresence().setActivity(Activity.customStatus("Ready and Willing"));
@@ -191,10 +185,10 @@ public class DiscordBot extends ListenerAdapter {
                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("you are not father").queue();
             }
         } else {
-            System.out.printf("[direct] %#s: %s\n",
-                    author,
-                    message.getContentDisplay()
-            );
+            //System.out.printf("[direct] %#s: %s\n",
+            //        author,
+            //        message.getContentDisplay()
+            //);
         }
         if (channel.getType() == ChannelType.TEXT) {
             System.out.println("The channel topic is " + channel.asTextChannel().getTopic());
