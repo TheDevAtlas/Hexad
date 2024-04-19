@@ -141,18 +141,11 @@ public class DiscordBot extends ListenerAdapter{
                                     embed.setDescription("I yearn for the mines of " + blockName);
                                     embed.setColor(0x42b580);
                                     embed.setFooter("Made By: thedevatlas And swig4");
-                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("")
-                                            .setEmbeds(embed.build())
-                                            .queue(responseMessage -> {
-                                                event.getMessage().addReaction(Emoji.fromUnicode("✅")).queue();
-                                            });
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).queue();
                                     //handler = new ClientPlayNetworkHandler(new MinecraftClient(new RunArgs()), new ClientConnection(), new ClientConnectionState());
                                     client.player.sendMessage(Text.literal("#mine " + blockName),false);
                                 } else {
-                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.")
-                                            .queue(responseMessage -> {
-                                                event.getMessage().addReaction(Emoji.fromUnicode("❌")).queue();
-                                            });
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.").queue();
                                 }
                                 break;
                             case "status":
