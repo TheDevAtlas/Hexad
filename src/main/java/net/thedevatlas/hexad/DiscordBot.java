@@ -13,6 +13,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
 
@@ -188,9 +189,13 @@ public class DiscordBot extends ListenerAdapter{
                                     embed.setColor(new Color(255,0,0));
 
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine " + blockName).setEmbeds(embed.build()).queue();
-                                    mc.player.sendMessage(Text.of("#mine " + blockName));
+                                    ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+                                        if(client.player != null) {
+                                            handler.sendChatMessage("#mine " + blockName);
+                                        }
+                                    });
                                 } else {
-                                    message.reply("Missing block name. Please specify a block to mine.");
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.");
                                 }
                                 break;
                             case "status":
@@ -207,9 +212,13 @@ public class DiscordBot extends ListenerAdapter{
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Status").setEmbeds(embedstatus.build()).queue();
                                 break;
                             case "stop":
-                                message.reply("I Have Stopped My Current Task.");
+                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("I Have Stopped My Current Task");
                                 status = "I Am Not Currently Doing Anything.";
-                                mc.player.sendMessage(Text.of("#cancel"));
+                                ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+                                    if(client.player != null) {
+                                        handler.sendChatMessage("#cancel");
+                                    }
+                                });
                                 break;
                         }
                     }

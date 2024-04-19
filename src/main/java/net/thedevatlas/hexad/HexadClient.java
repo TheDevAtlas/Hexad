@@ -14,7 +14,7 @@ public class HexadClient implements ClientModInitializer {
             // sendCommand("#mine oak_log"); // Send command to Discord or external service
             if (client.player != null) {
                 // handler.sendChatMessage("#mine oak_log"); // Send command in Minecraft
-                client.player.sendMessage(Text.literal("Hello There"), false); // Send chat message in Minecraft
+                //client.player.sendMessage(Text.literal("Hello There"), false); // Send chat message in Minecraft
             }
         });
     }
