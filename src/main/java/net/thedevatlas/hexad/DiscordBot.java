@@ -212,7 +212,14 @@ public class DiscordBot extends ListenerAdapter{
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Status").setEmbeds(embedstatus.build()).queue();
                                 break;
                             case "stop":
-                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("I Have Stopped My Current Task");
+                                jda.getPresence().setActivity(Activity.customStatus("Ready and Willing"));
+                                EmbedBuilder embedstop = new EmbedBuilder();
+                                embedstop.setTitle("Current Status");
+                                embedstop.setDescription("I Have Stopped My Current Task");
+                                embedstop.setColor(new Color(255,0,0));
+
+                                //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
+                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Stop").setEmbeds(embedstop.build()).queue();
                                 status = "I Am Not Currently Doing Anything.";
                                 ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
                                     if(client.player != null) {
