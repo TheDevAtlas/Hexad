@@ -214,7 +214,7 @@ public class DiscordBot extends ListenerAdapter{
                             case "stop":
                                 jda.getPresence().setActivity(Activity.customStatus("Ready and Willing"));
                                 EmbedBuilder embedstop = new EmbedBuilder();
-                                embedstop.setTitle("Current Status");
+                                embedstop.setTitle("Stop");
                                 embedstop.setDescription("I Have Stopped My Current Task");
                                 embedstop.setColor(new Color(255,0,0));
 
