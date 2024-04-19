@@ -1,5 +1,11 @@
 package net.thedevatlas.hexad;
 
+import baritone.api.BaritoneAPI;
+import baritone.api.pathing.goals.GoalBlock;
+import baritone.api.pathing.goals.GoalGetToBlock;
+
+import baritone.api.process.IMineProcess;
+import baritone.api.utils.BlockOptionalMeta;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -14,6 +20,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.hooks.SubscribeEvent;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.RunArgs;
 import net.minecraft.client.network.ClientConnectionState;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -144,6 +151,8 @@ public class DiscordBot extends ListenerAdapter {
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).queue();
                                     //handler = new ClientPlayNetworkHandler(new MinecraftClient(new RunArgs()), new ClientConnection(), new ClientConnectionState());
                                     client.player.sendMessage(Text.literal("#mine " + blockName), false);
+
+                                    BaritoneAPI.getProvider().getPrimaryBaritone().getMineProcess().mineByName(blockName);
                                 } else {
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.").queue();
                                 }
