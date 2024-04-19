@@ -15,6 +15,9 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.hooks.SubscribeEvent;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.network.ClientConnection;
 import net.minecraft.text.Text;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import java.awt.*;
@@ -130,11 +133,14 @@ public class DiscordBot extends ListenerAdapter{
                                     embed.setColor(new Color(255,0,0));
 
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine " + blockName).setEmbeds(embed.build()).queue();
-                                    ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+                                    /*ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
                                         if(client.player != null) {
                                             handler.sendChatMessage("#mine " + blockName);
                                         }
-                                    });
+                                    });*/
+
+                                    ClientPlayNetworkHandler handler = new ClientPlayNetworkHandler();
+                                    handler.sendChatMessage("#mine " + blockName);
                                 } else {
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.");
                                 }
