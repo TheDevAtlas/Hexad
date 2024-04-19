@@ -32,7 +32,7 @@ public class DiscordBot extends ListenerAdapter{
     public static final Emoji HEART = Emoji.fromUnicode("U+2764");
     private String status = "I Am Not Currently Doing Anything.";
     public static JDA jda;
-    static String username = MinecraftClient.getInstance().getSession().getUsername();
+
     private static LocalDateTime startTime;
     MinecraftClient mc = MinecraftClient.getInstance();
     public static String getRuntime() {
@@ -129,6 +129,7 @@ public class DiscordBot extends ListenerAdapter{
             // bot.getSelfUser().getGuildById(...).getTextChannelById(...).sendMessage(...).queue()
             // jda.getSelfUser().getMutualGuilds().getFirst().getTextChannelById(0).sendMessage("I have awaken, father").queue();
             //jda.getSelfUser().getMutualGuilds().get(0).getTextChannelById(0).sendMessage("I have awaken, father").queue();
+            String username = MinecraftClient.getInstance().getSession().getUsername();
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("I have awaken, father").queue();
             jda.awaitReady();
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Logged into: " + username).queue();
@@ -167,24 +168,16 @@ public class DiscordBot extends ListenerAdapter{
             if(author.getName().equals("thedevatlas") || author.getName().equals("swig4"))
             {
                 System.out.println(author.getName() + " : Can Run Commands");
-
-                // Send Back A Response To User //
                 // bot.getSelfUser().getGuildById(...).getTextChannelById(...).sendMessage(...).queue()
                 String[] parts = message.getContentDisplay().split(" ");
-
-                // Check if the message was sent in a guild/server
                 if (event.isFromGuild()) {
-                    // Extract the bot's name from the JDA instance
                     String botName = jda.getSelfUser().getName();
                     if (parts.length >= 2 && parts[0].equalsIgnoreCase(botName)) {
-                        String command = parts[1].toLowerCase(); // Extract the command
+                        String command = parts[1].toLowerCase();
                         switch (command) {
                             case "mine":
-                                // Check if the command has the block name
                                 if (parts.length >= 3) {
-                                    // Extract the block name from the command
                                     String blockName = parts[2].toLowerCase(); // Assuming the block name is the third part of the command
-                                    // Set the activity to mining the specified block
                                     jda.getPresence().setActivity(Activity.customStatus("Mining " + blockName));
                                     status = "I Am Currently Mining " + blockName;
 
@@ -197,13 +190,13 @@ public class DiscordBot extends ListenerAdapter{
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine " + blockName).setEmbeds(embed.build()).queue();
                                     mc.player.sendMessage(Text.of("#mine " + blockName));
                                 } else {
-                                    // If the block name is missing, reply with a message indicating that.
                                     message.reply("Missing block name. Please specify a block to mine.");
                                 }
                                 break;
                             case "status":
+                                String username = MinecraftClient.getInstance().getSession().getUsername();
                                 String runtime = getRuntime();
-                                String statusWithRuntime = status + "\nRuntime: " + runtime;
+                                String statusWithRuntime = status + "\nRuntime: " + runtime + "\nCurrent Account: " + username;
                                 // Send Message //
                                 EmbedBuilder embedstatus = new EmbedBuilder();
                                 embedstatus.setTitle("Current Status");
@@ -238,7 +231,6 @@ public class DiscordBot extends ListenerAdapter{
         }
 
         // Using specialization, you can check concrete types of the channel union
-
         if (channel.getType() == ChannelType.TEXT)
         {
             System.out.println("The channel topic is " + channel.asTextChannel().getTopic());
