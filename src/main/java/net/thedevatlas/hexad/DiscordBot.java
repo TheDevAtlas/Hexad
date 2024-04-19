@@ -12,24 +12,24 @@ import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.hooks.SubscribeEvent;
 import net.dv8tion.jda.api.requests.GatewayIntent;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-//import javax.annotation.Nonnull;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import java.awt.*;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.EnumSet;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import net.dv8tion.jda.api.Permission;
+import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
+import net.dv8tion.jda.api.interactions.components.buttons.Button;
 
 public class DiscordBot extends ListenerAdapter{
-    // See https://emojipedia.org/red-heart/ and find the codepoints
     public static final Emoji HEART = Emoji.fromUnicode("U+2764");
     private String status = "I Am Not Currently Doing Anything.";
     public static JDA jda;
@@ -47,123 +47,66 @@ public class DiscordBot extends ListenerAdapter{
     public static void RunBot() throws IOException
     {
         startTime = LocalDateTime.now();
-
-
-        // Possible ways to provide the token:
-
-        // 1. From a file:
-
-        // This would just be some text file with only the token in it
-        // Use Files.readString in java 11+
         String token = "MTIyOTk0ODY0NDc5MTE2MDg5Mg.Gm3K6_.8BOr2edNcooPGV1gTlyiiGO4LaMUEmc9MbtKmU";
-
-        // 2. Using environment variable:
-        // String token = System.getenv("TOKEN");
-
-        // 3. Using system property as -Dtoken=...
-        // This leaks the token in command line (task manager) and thread dumps to any other users on the same machine
-        // String token = System.getProperty("token");
-
-        // 4. From the command line directly
-        // This leaks the token in command line (task manager) to any other users on the same machine
-        // String token = args[0];
-
-
-        // Pick which intents we need to use in our code.
-        // To get the best performance, you want to make the most minimalistic list of intents, and have all others disabled.
-        // When an intent is enabled, you will receive events and cache updates related to that intent.
-        // For more information:
-        //
-        // - The documentation for GatewayIntent: https://docs.jda.wiki/net/dv8tion/jda/api/requests/GatewayIntent.html
-        // - The wiki page for intents and caching: https://jda.wiki/using-jda/gateway-intents-and-member-cache-policy/
-
         EnumSet<GatewayIntent> intents = EnumSet.of(
-                // Enables MessageReceivedEvent for guild (also known as servers)
                 GatewayIntent.GUILD_MESSAGES,
-                // Enables the event for private channels (also known as direct messages)
                 GatewayIntent.DIRECT_MESSAGES,
-                // Enables access to message.getContentRaw()
                 GatewayIntent.MESSAGE_CONTENT,
-                // Enables MessageReactionAddEvent for guild
                 GatewayIntent.GUILD_MESSAGE_REACTIONS,
-                // Enables MessageReactionAddEvent for private channels
                 GatewayIntent.DIRECT_MESSAGE_REACTIONS
         );
 
-        // To start the bot, you have to use the JDABuilder.
-
-        // You can choose one of the factory methods to build your bot:
-        // - createLight(...)
-        // - createDefault(...)
-        // - create(...)
-        // Each of these factory methods use different defaults, you can check the documentation for more details.
-
         try
         {
-            // By using createLight(token, intents), we use a minimalistic cache profile (lower ram usage)
-            // and only enable the provided set of intents. All other intents are disabled, so you won't receive events for those.
             jda = JDABuilder.createLight(token, intents)
-                    // On this builder, you are adding all your event listeners and session configuration
                     .addEventListeners(new DiscordBot())
-                    // You can do lots of configuration before starting, checkout all the setters on the JDABuilder class!
                     .setActivity(Activity.customStatus("Ready and Willing"))
-                    // Once you're done configuring your jda instance, call build to start and login the bot.
                     .build();
-
-            // Here you can now start using the jda instance before its fully loaded,
-            // this can be useful for stuff like creating background services or similar.
-
-            // The queue(...) means that we are making a REST request to the discord API server!
-            // Usually, this is done asynchronously on another thread which handles scheduling and rate-limits.
-            // The (ping -> ...) is called a lambda expression, if you're unfamiliar with this syntax it is HIGHLY recommended to look it up!
             jda.getRestPing().queue(ping ->
-                    // shows ping in milliseconds
                     System.out.println("Logged in with ping: " + ping)
             );
 
-            // If you want to access the cache, you can use awaitReady() to block the main thread until the jda instance is fully loaded
             jda.awaitReady();
-
-            // Now we can access the fully loaded cache and show some statistics or do other cache dependent things
-            System.out.println("Guilds: " + jda.getGuildCache().size());
-
-            // bot.getSelfUser().getGuildById(...).getTextChannelById(...).sendMessage(...).queue()
-            // jda.getSelfUser().getMutualGuilds().getFirst().getTextChannelById(0).sendMessage("I have awaken, father").queue();
-            //jda.getSelfUser().getMutualGuilds().get(0).getTextChannelById(0).sendMessage("I have awaken, father").queue();
+            String botName = jda.getSelfUser().getName();
+            //System.out.println("Guilds: " + jda.getGuildCache().size());
             String username = MinecraftClient.getInstance().getSession().getUsername();
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("I have awaken, father").queue();
             jda.awaitReady();
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Logged into: " + username).queue();
+
+
+            EmbedBuilder embed = new EmbedBuilder();
+            embed.setTitle(botName + "'s Control Panel");
+            //embed.setThumbnail("Apollo.png");
+            embed.setColor(0x42b580);
+            embed.setDescription("Here's My Available Commands");
+            embed.addField("Stop", "Stops The Current Task", true);
+            embed.addField("Status","Returns The Bots Status",true);
+
+            Button button = Button.success("Stop", "Stop");
+            Button button2 = Button.danger("Status", "Status");
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).setActionRow(button, button2).queue();
         }
         catch (InterruptedException e)
         {
-            // Thrown if the awaitReady() call is interrupted
             e.printStackTrace();
         }
+
     }
 
-    // This overrides the method called onMessageReceived in the ListenerAdapter class
-    // Your IDE (such as intellij or eclipse) can automatically generate this override for you, by simply typing "onMessage" and auto-completing it!
     @Override
     public void onMessageReceived(MessageReceivedEvent event)
     {
-        // The user who sent the message
         User author = event.getAuthor();
-        // This is a special class called a "union", which allows you to perform specialization to more concrete types such as TextChannel or NewsChannel
         MessageChannelUnion channel = event.getChannel();
-        // The actual message sent by the user, this can also be a message the bot sent itself, since you *do* receive your own messages after all
         Message message = event.getMessage();
-
-        // Check whether the message was sent in a guild / server
         if (event.isFromGuild())
         {
-
-            // This is a message from a server
             System.out.printf("[%s] [%#s] %#s: %s\n",
-                    event.getGuild().getName(), // The name of the server the user sent the message in, this is generally referred to as "guild" in the API
-                    channel, // The %#s makes use of the channel name and displays as something like #general
-                    author,  // The %#s makes use of User#getAsTag which results in something like minn or Minn#1337
-                    message.getContentDisplay() // This removes any unwanted mention syntax and converts it to a readable string
+                    event.getGuild().getName(),
+                    channel,
+                    author,
+                    message.getContentDisplay()
             );
 
             if(author.getName().equals("thedevatlas") || author.getName().equals("swig4"))
@@ -178,11 +121,9 @@ public class DiscordBot extends ListenerAdapter{
                         switch (command) {
                             case "mine":
                                 if (parts.length >= 3) {
-                                    String blockName = parts[2].toLowerCase(); // Assuming the block name is the third part of the command
+                                    String blockName = parts[2].toLowerCase();
                                     jda.getPresence().setActivity(Activity.customStatus("Mining " + blockName));
                                     status = "I Am Currently Mining " + blockName;
-
-                                    // Send Message //
                                     EmbedBuilder embed = new EmbedBuilder();
                                     embed.setTitle("Mining");
                                     embed.setDescription("I yearn for the mines of " + blockName);
@@ -202,7 +143,6 @@ public class DiscordBot extends ListenerAdapter{
                                 String username = MinecraftClient.getInstance().getSession().getUsername();
                                 String runtime = getRuntime();
                                 String statusWithRuntime = status + "\nRuntime: " + runtime + "\nCurrent Account: " + username;
-                                // Send Message //
                                 EmbedBuilder embedstatus = new EmbedBuilder();
                                 embedstatus.setTitle("Current Status");
                                 embedstatus.setDescription(statusWithRuntime);
@@ -239,14 +179,11 @@ public class DiscordBot extends ListenerAdapter{
         }
         else
         {
-            // This is a message from a private channel
             System.out.printf("[direct] %#s: %s\n",
-                    author, // same as above
+                    author,
                     message.getContentDisplay()
             );
         }
-
-        // Using specialization, you can check concrete types of the channel union
         if (channel.getType() == ChannelType.TEXT)
         {
             System.out.println("The channel topic is " + channel.asTextChannel().getTopic());
@@ -255,9 +192,9 @@ public class DiscordBot extends ListenerAdapter{
         if (channel.getType().isThread())
         {
             System.out.println("This thread is part of channel #" +
-                    channel.asThreadChannel()  // Cast the channel union to thread
-                            .getParentChannel() // Get the parent of that thread, which is the channel it was created in (like forum or text channel)
-                            .getName()          // And then print out the name of that channel
+                    channel.asThreadChannel()
+                            .getParentChannel()
+                            .getName()
             );
         }
     }
@@ -268,4 +205,14 @@ public class DiscordBot extends ListenerAdapter{
         if (event.getEmoji().equals(HEART))
             System.out.println("A user loved a message!");
     }
+    @SubscribeEvent
+    public void onButtonClick(ButtonInteractionEvent event) {
+        String buttonId = event.getComponentId();
+        if (buttonId.equals("Stop")) {
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Stop Clicked").queue();
+        } else if (buttonId.equals("Status")) {
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Status Clicked").queue();
+        }
+    }
 }
+
