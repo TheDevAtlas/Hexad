@@ -15,6 +15,8 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.hooks.SubscribeEvent;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.RunArgs;
+import net.minecraft.client.network.ClientConnectionState;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.network.ClientConnection;
@@ -37,6 +39,8 @@ public class DiscordBot extends ListenerAdapter{
     private String status = "I Am Not Currently Doing Anything.";
     public static JDA jda;
 
+    public static MinecraftClient client;
+
     private static LocalDateTime startTime;
     MinecraftClient mc = MinecraftClient.getInstance();
     public static String getRuntime() {
@@ -50,7 +54,7 @@ public class DiscordBot extends ListenerAdapter{
     public static void RunBot() throws IOException
     {
         startTime = LocalDateTime.now();
-        String token = "MTIyOTk0ODY0NDc5MTE2MDg5Mg.Gm3K6_.8BOr2edNcooPGV1gTlyiiGO4LaMUEmc9MbtKmU";
+        String token = "MTIyOTk1NDUxMTQxODgxODY0MA.GOibWw.hUbFpRoXPNp6BOK7Dw4i-r5BviKKYbAUJuqOV0"; // Apollo
         EnumSet<GatewayIntent> intents = EnumSet.of(
                 GatewayIntent.GUILD_MESSAGES,
                 GatewayIntent.DIRECT_MESSAGES,
@@ -89,6 +93,13 @@ public class DiscordBot extends ListenerAdapter{
             Button button = Button.success("Stop", "Stop");
             Button button2 = Button.danger("Status", "Status");
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).setActionRow(button, button2).queue();
+
+            ClientPlayConnectionEvents.JOIN.register((h, sender, c) -> {
+                if(client.player != null) {
+                    //handler.sendChatMessage("#mine " + blockName);
+                    client = c;
+                }
+            });
         }
         catch (InterruptedException e)
         {
@@ -139,8 +150,8 @@ public class DiscordBot extends ListenerAdapter{
                                         }
                                     });*/
 
-                                    ClientPlayNetworkHandler handler = new ClientPlayNetworkHandler();
-                                    handler.sendChatMessage("#mine " + blockName);
+                                    //handler = new ClientPlayNetworkHandler(new MinecraftClient(new RunArgs()), new ClientConnection(), new ClientConnectionState());
+                                    client.player.sendMessage(Text.literal("#mine " + blockName),false);
                                 } else {
                                     jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.");
                                 }
@@ -167,11 +178,13 @@ public class DiscordBot extends ListenerAdapter{
                                 //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Stop").setEmbeds(embedstop.build()).queue();
                                 status = "I Am Not Currently Doing Anything.";
-                                ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+                                /*ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
                                     if(client.player != null) {
                                         handler.sendChatMessage("#cancel");
                                     }
-                                });
+                                });*/
+
+                                client.player.sendMessage(Text.literal("#stop"),false);
                                 break;
                         }
                     }
