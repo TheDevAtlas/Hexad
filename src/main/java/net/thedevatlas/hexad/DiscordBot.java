@@ -84,11 +84,10 @@ public class DiscordBot extends ListenerAdapter{
             embed.setColor(0x42b580);
             embed.setDescription("Here's My Available Commands");
             embed.addField("Stop", "Stops The Current Task", true);
-            embed.addField("Status", "Returns The Bots Status", true);
-            embed.setFooter("Made By: thedevatlas And swig4");
+            embed.addField("Status","Returns The Bots Status",true);
 
             Button button = Button.success("Stop", "Stop");
-            Button button2 = Button.success("Status", "Status");
+            Button button2 = Button.danger("Status", "Status");
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).setActionRow(button, button2).queue();
         }
         catch (InterruptedException e)
@@ -131,18 +130,19 @@ public class DiscordBot extends ListenerAdapter{
                                     EmbedBuilder embed = new EmbedBuilder();
                                     embed.setTitle("Mining");
                                     embed.setDescription("I yearn for the mines of " + blockName);
-                                    embed.setColor(0x42b580);
-                                    embed.setFooter("Made By: thedevatlas And swig4");
-                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("")
-                                            .setEmbeds(embed.build())
-                                            .queue(responseMessage -> {
-                                                event.getMessage().addReaction(Emoji.fromUnicode("✅")).queue();
-                                            });
+                                    embed.setColor(new Color(255,0,0));
+
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Mine " + blockName).setEmbeds(embed.build()).queue();
+                                    /*ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+                                        if(client.player != null) {
+                                            handler.sendChatMessage("#mine " + blockName);
+                                        }
+                                    });*/
+
+                                    ClientPlayNetworkHandler handler = new ClientPlayNetworkHandler();
+                                    handler.sendChatMessage("#mine " + blockName);
                                 } else {
-                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.")
-                                            .queue(responseMessage -> {
-                                                event.getMessage().addReaction(Emoji.fromUnicode("❌")).queue();
-                                            });
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing block name. Please specify a block to mine.");
                                 }
                                 break;
                             case "status":
@@ -152,20 +152,20 @@ public class DiscordBot extends ListenerAdapter{
                                 EmbedBuilder embedstatus = new EmbedBuilder();
                                 embedstatus.setTitle("Current Status");
                                 embedstatus.setDescription(statusWithRuntime);
-                                embedstatus.setColor(0x42b580);
-                                embedstatus.setFooter("Made By: thedevatlas And swig4");
+                                embedstatus.setColor(new Color(255,0,0));
+
                                 //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
-                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embedstatus.build()).queue();
+                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Status").setEmbeds(embedstatus.build()).queue();
                                 break;
                             case "stop":
                                 jda.getPresence().setActivity(Activity.customStatus("Ready and Willing"));
                                 EmbedBuilder embedstop = new EmbedBuilder();
                                 embedstop.setTitle("Stop");
                                 embedstop.setDescription("I Have Stopped My Current Task");
-                                embedstop.setColor(0x42b580);
-                                embedstop.setFooter("Made By: thedevatlas And swig4");
+                                embedstop.setColor(new Color(255,0,0));
+
                                 //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
-                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embedstop.build()).queue();
+                                jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Stop").setEmbeds(embedstop.build()).queue();
                                 status = "I Am Not Currently Doing Anything.";
                                 ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
                                     if(client.player != null) {
@@ -205,5 +205,20 @@ public class DiscordBot extends ListenerAdapter{
         }
     }
 
+    @Override
+    public void onMessageReactionAdd(MessageReactionAddEvent event)
+    {
+        if (event.getEmoji().equals(HEART))
+            System.out.println("A user loved a message!");
+    }
+    @SubscribeEvent
+    public void onButtonClick(ButtonInteractionEvent event) {
+        String buttonId = event.getComponentId();
+        if (buttonId.equals("Stop")) {
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Stop Clicked").queue();
+        } else if (buttonId.equals("Status")) {
+            jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Status Clicked").queue();
+        }
+    }
 }
 
