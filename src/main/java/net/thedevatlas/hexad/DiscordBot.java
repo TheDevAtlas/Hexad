@@ -12,6 +12,10 @@ import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.entities.channel.unions.MessageChannelUnion;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.hooks.SubscribeEvent;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.RunArgs;
+import net.minecraft.client.network.ClientConnectionState;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.Text;
@@ -21,6 +25,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.EnumSet;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.stream.Collectors;
+
+import net.dv8tion.jda.api.Permission;
 import java.util.stream.Collectors;
 
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
@@ -30,7 +38,7 @@ public class DiscordBot extends ListenerAdapter {
 
     private String status = "I Am Not Currently Doing Anything.";
     public static JDA jda;
-    public static MinecraftClient client;
+
     private static LocalDateTime startTime;
     //MinecraftClient mc = MinecraftClient.getInstance();
 
@@ -54,14 +62,19 @@ public class DiscordBot extends ListenerAdapter {
                 GatewayIntent.DIRECT_MESSAGE_REACTIONS
         );
 
-        try {
+        try
+        {
             jda = JDABuilder.createLight(token, intents)
                     .addEventListeners(new DiscordBot())
                     .setActivity(Activity.customStatus("Ready and Willing"))
                     .build();
+            jda.getRestPing().queue(ping ->
+                    System.out.println("Logged in with ping: " + ping)
+            );
 
             jda.awaitReady();
             String botName = jda.getSelfUser().getName();
+            //System.out.println("Guilds: " + jda.getGuildCache().size());
             String username = MinecraftClient.getInstance().getSession().getUsername();
             String combinedMessage = "I have awaken, father\nLogged into: " + username;
             jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage(combinedMessage).queue();
