@@ -1,7 +1,6 @@
 plugins {
 	id 'fabric-loom' version '1.6-SNAPSHOT'
 	id 'maven-publish'
-	id 'application'
 }
 
 version = project.mod_version
@@ -17,8 +16,11 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
-	mavenCentral()
+
+
 }
+
+
 
 fabricApi {
 	configureDataGeneration()
@@ -33,6 +35,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	implementation files('libs/JDA-5.0.0-beta.22-javadoc.jar')
+	implementation files('libs/baritone-api-fabric-1.10.2.jar')
 	implementation("net.dv8tion:JDA:5.0.0-beta.22")
 }
 
