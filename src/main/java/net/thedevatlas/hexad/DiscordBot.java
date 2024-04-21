@@ -34,6 +34,8 @@ import java.util.stream.Collectors;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 
+// need to control multiple clients from one discord bot //
+
 public class DiscordBot extends ListenerAdapter {
 
     private String status = "I Am Not Currently Doing Anything.";
