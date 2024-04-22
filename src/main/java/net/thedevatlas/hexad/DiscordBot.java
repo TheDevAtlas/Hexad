@@ -42,6 +42,7 @@ public class DiscordBot extends ListenerAdapter {
     public static JDA jda;
 
     private static LocalDateTime startTime;
+    private int statusNumber = 0;
     //MinecraftClient mc = MinecraftClient.getInstance();
 
     public static String getRuntime() {
@@ -97,7 +98,8 @@ public class DiscordBot extends ListenerAdapter {
             embed.setFooter("Made By: thedevatlas And swig4");
             Button button = Button.success("Stop", "Stop");
             Button button2 = Button.success("Status", "Status");
-            channel.sendMessageEmbeds(embed.build()).setActionRow(button, button2).queue();
+            Button button3 = Button.success("Help", "Help");
+            channel.sendMessageEmbeds(embed.build()).setActionRow(button, button2, button3).queue();
             /*ClientPlayConnectionEvents.JOIN.register((h, sender, c) -> {
                 if (client.player != null) {
                     //handler.sendChatMessage("#mine " + blockName);
@@ -136,6 +138,7 @@ public class DiscordBot extends ListenerAdapter {
                                     String blockName = parts[2].toLowerCase();
                                     jda.getPresence().setActivity(Activity.customStatus("Mining " + blockName));
                                     status = "I Am Currently Mining " + blockName;
+                                    statusNumber = 1;
                                     EmbedBuilder embed = new EmbedBuilder();
                                     embed.setTitle("Mining");
                                     embed.setDescription("I yearn for the mines of " + blockName);
@@ -165,21 +168,50 @@ public class DiscordBot extends ListenerAdapter {
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embedstatus.build()).queue();
                                 break;
                             case "stop":
+                                String text = "";
+                                int color = 0x42b580;
                                 jda.getPresence().setActivity(Activity.customStatus("Ready and Willing"));
+                                status = "I Am Not Currently Doing Anything.";
+                                if (statusNumber == 1) {
+                                    BaritoneAPI.getProvider().getPrimaryBaritone().getMineProcess().cancel();
+                                    text = "I Have Stopped My Current Task";
+                                } else if (statusNumber == 2) {
+                                    //for other cmds
+                                } else {
+                                    text = "I Am Not Doing Anything";
+                                    color = 0xFF0000;
+                                }
                                 EmbedBuilder embedstop = new EmbedBuilder();
                                 embedstop.setTitle("Stop");
-                                embedstop.setDescription("I Have Stopped My Current Task");
-                                embedstop.setColor(0x42b580);
+                                embedstop.setDescription(text);
+                                embedstop.setColor(color);
                                 embedstop.setFooter("Made By: thedevatlas And swig4");
                                 //.getChannel().sendMessage("Mine!").setEmbeds(embed.build()).queue()
                                 jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embedstop.build()).queue();
-                                status = "I Am Not Currently Doing Anything.";
-                                /*ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
-                                    if(client.player != null) {
-                                        handler.sendChatMessage("#cancel");
-                                    }
-                                });*/
-                                //client.player.sendMessage(Text.literal("#stop"), false);
+                                statusNumber = 0;
+                                break;
+                            case "goto":
+                                if (parts.length >= 5) {
+                                    int x = Integer.parseInt(parts[2]);
+                                    int y = Integer.parseInt(parts[3]);
+                                    int z = Integer.parseInt(parts[4]);
+                                    jda.getPresence().setActivity(Activity.customStatus("Walking To  (" + x + ", " + y + ", " + z + ")"));
+                                    status = "I Am Currently Walking To: (" + x + ", " + y + ", " + z + ")";
+                                    EmbedBuilder embed = new EmbedBuilder();
+                                    embed.setTitle("Walking To");
+                                    embed.setDescription("Walking To (" + x + ", " + y + ", " + z + ")");
+                                    embed.setColor(0x42b580);
+                                    embed.setFooter("Made By: thedevatlas And swig4");
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("").setEmbeds(embed.build()).queue();
+                                    //handler = new ClientPlayNetworkHandler(new MinecraftClient(new RunArgs()), new ClientConnection(), new ClientConnectionState());
+                                    //client.player.sendMessage(Text.literal("#mine " + blockName), false);
+
+                                    ////////////
+                                    //BaritoneAPI.getProvider().getPrimaryBaritone().
+                                    ////////////
+                                } else {
+                                    jda.getGuildById("1229946274908864543").getTextChannelById("1229946274908864546").sendMessage("Missing coordinates. Please specify X Y Z coordinates to walk to.").queue();
+                                }
                                 break;
                         }
                     }
@@ -214,13 +246,19 @@ public class DiscordBot extends ListenerAdapter {
         String buttonId = event.getComponentId();
         switch (buttonId) {
             case "Stop":
-                stop(event); // Pass the event to the stop method
+                stop(event);
                 break;
             case "Status":
-                status(event); // Pass the event to the status method
+                status(event);
                 break;
+            case "Help":
+                EmbedBuilder embed = new EmbedBuilder();
+                embed.setTitle("Help");
+                embed.setDescription("Put The Bot Name In Front Of The Command.\nmine | status | stop");
+                embed.setColor(0x42b580);
+                embed.setFooter("Made By: thedevatlas And swig4");
+                event.replyEmbeds(embed.build()).setEphemeral(true).queue();
             default:
-                // Handle unknown button clicks
                 event.reply("Unknown button clicked!").queue();
         }
     }
@@ -240,15 +278,25 @@ public class DiscordBot extends ListenerAdapter {
     }
 
     public void stop(ButtonInteractionEvent event) {
+        String text = "";
+        int color = 0x42b580;
+        if (statusNumber == 1) {
+            BaritoneAPI.getProvider().getPrimaryBaritone().getMineProcess().cancel();
+            text = "I Have Stopped My Current Task";
+        } else if (statusNumber == 2) {
+            //for other cmds
+        } else {
+            text = "I Am Not Doing Anything";
+            color = 0xFF0000;
+        }
         EmbedBuilder embed = new EmbedBuilder();
         embed.setTitle("Stop");
-        embed.setDescription("I Have Stopped My Current Task");
-        embed.setColor(Color.RED);
+        embed.setDescription(text);
+        embed.setColor(color);
         embed.setFooter("Made By: thedevatlas And swig4");
-
         event.replyEmbeds(embed.build()).setEphemeral(true).queue();
-
         status = "I Am Not Currently Doing Anything.";
-        //.sendMessage(Text.literal("#stop"), false);
+        statusNumber = 0;
     }
+
 }
