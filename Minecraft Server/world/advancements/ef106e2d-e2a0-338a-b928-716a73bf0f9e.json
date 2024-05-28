@@ -7,9 +7,34 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2024-05-26 09:14:38 -0400"
+      "minecraft:forest": "2024-05-26 09:14:38 -0400",
+      "minecraft:savanna": "2024-05-26 10:56:21 -0400"
     },
     "done": false
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2024-05-26 12:23:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2024-05-26 10:42:48 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2024-05-26 12:23:22 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2024-05-26 12:23:22 -0400"
+    },
+    "done": true
   },
   "DataVersion": 3463
 }

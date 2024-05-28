@@ -1,426 +1,613 @@
-[09:13:35] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[09:13:38] [ServerMain/INFO]: Loaded 7 recipes
-[09:13:38] [ServerMain/INFO]: Loaded 1271 advancements
-[09:13:39] [Server thread/INFO]: Starting minecraft server version 1.20
-[09:13:39] [Server thread/INFO]: Loading properties
-[09:13:39] [Server thread/INFO]: Default game type: SURVIVAL
-[09:13:39] [Server thread/INFO]: Generating keypair
-[09:13:39] [Server thread/INFO]: Starting Minecraft server on *:25565
-[09:13:39] [Server thread/INFO]: Using default channel type
-[09:13:39] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[09:13:39] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[09:13:39] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[09:13:39] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[09:13:39] [Server thread/INFO]: Preparing level "world"
-[09:13:41] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[09:13:46] [Worker-Main-10/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-10/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-10/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[09:13:46] [Worker-Main-5/INFO]: Preparing spawn area: 3%
-[09:13:47] [Worker-Main-11/INFO]: Preparing spawn area: 34%
-[09:13:47] [Server thread/INFO]: Time elapsed: 6423 ms
-[09:13:47] [Server thread/INFO]: Done (7.800s)! For help, type "help"
-[09:14:36] [Server thread/INFO]: TheDevAtlas[/127.0.0.1:56281] logged in with entity id 208 at (-39.5, 68.0, -41.5)
-[09:14:36] [Server thread/INFO]: TheDevAtlas joined the game
-[09:15:20] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:56318] logged in with entity id 294 at (-26.5, 65.0, -24.5)
-[09:15:20] [Server thread/INFO]: Bot0 joined the game
-[09:15:22] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:56323] logged in with entity id 312 at (-28.5, 65.0, -28.5)
-[09:15:22] [Server thread/INFO]: Bot1 joined the game
-[09:15:23] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:56327] logged in with entity id 313 at (-21.5, 69.0, -31.5)
-[09:15:23] [Server thread/INFO]: Bot2 joined the game
-[09:15:25] [Server thread/INFO]: Bot3[/[0:0:0:0:0:0:0:1]:56330] logged in with entity id 317 at (-35.5, 70.0, -33.5)
-[09:15:25] [Server thread/INFO]: Bot3 joined the game
-[09:15:28] [Server thread/INFO]: Bot4[/[0:0:0:0:0:0:0:1]:56332] logged in with entity id 321 at (-38.5, 66.0, -26.5)
-[09:15:28] [Server thread/INFO]: Bot4 joined the game
-[09:15:30] [Server thread/INFO]: Bot5[/[0:0:0:0:0:0:0:1]:56335] logged in with entity id 326 at (-40.5, 65.0, -39.5)
-[09:15:30] [Server thread/INFO]: Bot5 joined the game
-[09:15:32] [Server thread/INFO]: Bot6[/[0:0:0:0:0:0:0:1]:56338] logged in with entity id 327 at (-34.5, 70.0, -35.5)
-[09:15:32] [Server thread/INFO]: Bot6 joined the game
-[09:15:34] [Server thread/INFO]: Bot7[/[0:0:0:0:0:0:0:1]:56340] logged in with entity id 334 at (-28.5, 64.0, -27.5)
-[09:15:34] [Server thread/INFO]: Bot7 joined the game
-[09:15:35] [Server thread/INFO]: Bot8[/[0:0:0:0:0:0:0:1]:56343] logged in with entity id 337 at (-28.5, 64.0, -41.5)
-[09:15:35] [Server thread/INFO]: Bot8 joined the game
-[09:15:38] [Server thread/INFO]: Bot9[/[0:0:0:0:0:0:0:1]:56349] logged in with entity id 342 at (-24.5, 65.0, -23.5)
-[09:15:38] [Server thread/INFO]: Bot9 joined the game
-[09:15:40] [Server thread/INFO]: Bot10[/[0:0:0:0:0:0:0:1]:56351] logged in with entity id 343 at (-25.5, 70.0, -38.5)
-[09:15:40] [Server thread/INFO]: Bot10 joined the game
-[09:15:42] [Server thread/INFO]: Bot11[/[0:0:0:0:0:0:0:1]:56354] logged in with entity id 348 at (-32.5, 78.0, -39.5)
-[09:15:42] [Server thread/INFO]: Bot11 joined the game
-[09:15:43] [Server thread/INFO]: Bot12[/[0:0:0:0:0:0:0:1]:56356] logged in with entity id 353 at (-38.5, 68.0, -41.5)
-[09:15:43] [Server thread/INFO]: Bot12 joined the game
-[09:15:45] [Server thread/INFO]: Bot13[/[0:0:0:0:0:0:0:1]:56361] logged in with entity id 362 at (-31.5, 67.0, -29.5)
-[09:15:45] [Server thread/INFO]: Bot13 joined the game
-[09:15:48] [Server thread/INFO]: Bot14[/[0:0:0:0:0:0:0:1]:56364] logged in with entity id 367 at (-31.5, 65.0, -33.5)
-[09:15:48] [Server thread/INFO]: Bot14 joined the game
-[09:15:49] [Server thread/INFO]: Bot15[/[0:0:0:0:0:0:0:1]:56366] logged in with entity id 371 at (-23.5, 70.0, -26.5)
-[09:15:49] [Server thread/INFO]: Bot15 joined the game
-[09:15:52] [Server thread/INFO]: Bot16[/[0:0:0:0:0:0:0:1]:56368] logged in with entity id 374 at (-41.5, 67.0, -27.5)
-[09:15:52] [Server thread/INFO]: Bot16 joined the game
-[09:15:53] [Server thread/INFO]: Bot17[/[0:0:0:0:0:0:0:1]:56371] logged in with entity id 379 at (-41.5, 65.0, -39.5)
-[09:15:53] [Server thread/INFO]: Bot17 joined the game
-[09:15:55] [Server thread/INFO]: Bot3 lost connection: Timed out
-[09:15:55] [Server thread/INFO]: Bot3 left the game
-[09:15:56] [Server thread/INFO]: Bot18[/[0:0:0:0:0:0:0:1]:56373] logged in with entity id 387 at (-21.5, 71.0, -36.5)
-[09:15:56] [Server thread/INFO]: Bot18 joined the game
-[09:15:57] [Server thread/INFO]: Bot19[/[0:0:0:0:0:0:0:1]:56375] logged in with entity id 392 at (-32.5, 70.0, -30.5)
-[09:15:57] [Server thread/INFO]: Bot19 joined the game
-[09:15:58] [Server thread/INFO]: Bot4 lost connection: Timed out
-[09:15:58] [Server thread/INFO]: Bot4 left the game
-[09:15:59] [Server thread/INFO]: Bot20[/[0:0:0:0:0:0:0:1]:56379] logged in with entity id 399 at (-25.5, 68.0, -32.5)
-[09:15:59] [Server thread/INFO]: Bot20 joined the game
-[09:16:00] [Server thread/INFO]: Bot5 lost connection: Timed out
-[09:16:00] [Server thread/INFO]: Bot5 left the game
-[09:16:01] [Server thread/INFO]: Bot21[/[0:0:0:0:0:0:0:1]:56381] logged in with entity id 400 at (-26.5, 70.0, -38.5)
-[09:16:01] [Server thread/INFO]: Bot21 joined the game
-[09:16:02] [Server thread/INFO]: Bot6 lost connection: Timed out
-[09:16:02] [Server thread/INFO]: Bot6 left the game
-[09:16:03] [Server thread/INFO]: Bot22[/[0:0:0:0:0:0:0:1]:56384] logged in with entity id 405 at (-40.5, 64.0, -23.5)
-[09:16:03] [Server thread/INFO]: Bot22 joined the game
-[09:16:04] [Server thread/INFO]: Bot7 lost connection: Timed out
-[09:16:04] [Server thread/INFO]: Bot7 left the game
-[09:16:05] [Server thread/INFO]: Bot8 lost connection: Timed out
-[09:16:05] [Server thread/INFO]: Bot8 left the game
-[09:16:06] [Server thread/INFO]: Bot23[/[0:0:0:0:0:0:0:1]:56387] logged in with entity id 414 at (-36.5, 64.0, -26.5)
-[09:16:06] [Server thread/INFO]: Bot23 joined the game
-[09:16:08] [Server thread/INFO]: TheDevAtlas lost connection: Disconnected
-[09:16:08] [Server thread/INFO]: TheDevAtlas left the game
-[09:16:08] [Server thread/INFO]: Bot24[/[0:0:0:0:0:0:0:1]:56392] logged in with entity id 416 at (-34.5, 70.0, -33.5)
-[09:16:08] [Server thread/INFO]: Bot24 joined the game
-[09:16:08] [Server thread/INFO]: Bot9 lost connection: Timed out
-[09:16:08] [Server thread/INFO]: Bot9 left the game
-[09:16:10] [Server thread/INFO]: Bot10 lost connection: Timed out
-[09:16:10] [Server thread/INFO]: Bot10 left the game
-[09:16:11] [Server thread/INFO]: Bot0 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot0 left the game
-[09:16:11] [Server thread/INFO]: Bot1 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot1 left the game
-[09:16:11] [Server thread/INFO]: Bot2 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot2 left the game
-[09:16:11] [Server thread/INFO]: Bot11 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot11 left the game
-[09:16:11] [Server thread/INFO]: Bot12 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot12 left the game
-[09:16:11] [Server thread/INFO]: Bot13 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot13 left the game
-[09:16:11] [Server thread/INFO]: Bot14 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot14 left the game
-[09:16:11] [Server thread/INFO]: Bot15 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot15 left the game
-[09:16:11] [Server thread/INFO]: Bot16 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot16 left the game
-[09:16:11] [Server thread/INFO]: Bot17 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot17 left the game
-[09:16:11] [Server thread/INFO]: Bot18 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot18 left the game
-[09:16:11] [Server thread/INFO]: Bot19 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot19 left the game
-[09:16:11] [Server thread/INFO]: Bot20 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot20 left the game
-[09:16:11] [Server thread/INFO]: Bot21 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot21 left the game
-[09:16:11] [Server thread/INFO]: Bot22 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot22 left the game
-[09:16:11] [Server thread/INFO]: Bot23 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot23 left the game
-[09:16:11] [Server thread/INFO]: Bot24 lost connection: Disconnected
-[09:16:11] [Server thread/INFO]: Bot24 left the game
-[09:18:25] [Server thread/INFO]: TheDevAtlas[/127.0.0.1:56423] logged in with entity id 434 at (-31.966801790959046, 65.0, -39.32580253578672)
-[09:18:25] [Server thread/INFO]: TheDevAtlas joined the game
-[09:18:39] [Server thread/INFO]: Made TheDevAtlas a server operator
-[09:18:45] [Server thread/INFO]: [TheDevAtlas: Set own game mode to Creative Mode]
-[09:18:50] [Server thread/INFO]: [TheDevAtlas: Set the time to 1000]
-[09:18:55] [Server thread/INFO]: [TheDevAtlas: Gamerule doDaylightCycle is now set to: false]
-[09:19:06] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to 0.500000, 82.130915, 0.500000]
-[09:19:06] [Server thread/WARN]: TheDevAtlas moved too quickly! 32.06434261630565,0.0,34.59430001417969
-[09:19:06] [Server thread/WARN]: TheDevAtlas moved too quickly! 32.06434261630565,0.0,34.59430001417969
-[09:19:13] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:56437] logged in with entity id 672 at (-26.5, 65.0, -24.5)
-[09:19:13] [Server thread/INFO]: Bot0 joined the game
-[09:19:15] [Server thread/WARN]: Bot0 moved too quickly! 26.5,0.0,24.5
-[09:19:15] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:56440] logged in with entity id 676 at (-28.5, 65.0, -28.5)
-[09:19:15] [Server thread/INFO]: Bot1 joined the game
-[09:19:17] [Server thread/WARN]: Bot1 moved too quickly! 28.5,0.0,28.5
-[09:19:17] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:56442] logged in with entity id 678 at (-21.5, 69.0, -31.5)
-[09:19:17] [Server thread/INFO]: Bot2 joined the game
-[09:19:19] [Server thread/WARN]: Bot2 moved too quickly! 21.5,0.0,31.5
-[09:19:19] [Server thread/INFO]: Bot3[/[0:0:0:0:0:0:0:1]:56447] logged in with entity id 687 at (-35.5, 70.0, -33.5)
-[09:19:19] [Server thread/INFO]: Bot3 joined the game
-[09:19:21] [Server thread/WARN]: Bot3 moved too quickly! 35.5,-0.07840000152587834,33.5
-[09:19:21] [Server thread/INFO]: Bot4[/[0:0:0:0:0:0:0:1]:56449] logged in with entity id 694 at (-38.5, 66.0, -26.5)
-[09:19:21] [Server thread/INFO]: Bot4 joined the game
-[09:19:23] [Server thread/INFO]: Bot5[/[0:0:0:0:0:0:0:1]:56451] logged in with entity id 695 at (-40.5, 65.0, -39.5)
-[09:19:23] [Server thread/INFO]: Bot5 joined the game
-[09:19:24] [Server thread/WARN]: Bot4 moved too quickly! 38.5,0.0,26.5
-[09:19:25] [Server thread/INFO]: Bot6[/[0:0:0:0:0:0:0:1]:56454] logged in with entity id 698 at (-34.5, 70.0, -35.5)
-[09:19:25] [Server thread/INFO]: Bot6 joined the game
-[09:19:26] [Server thread/WARN]: Bot5 moved too quickly! 40.5,0.0,39.5
-[09:19:27] [Server thread/INFO]: Bot7[/[0:0:0:0:0:0:0:1]:56456] logged in with entity id 707 at (-28.5, 64.0, -27.5)
-[09:19:27] [Server thread/INFO]: Bot7 joined the game
-[09:19:28] [Server thread/WARN]: Bot6 moved too quickly! 34.5,-0.07840000152587834,35.5
-[09:19:29] [Server thread/INFO]: Bot8[/[0:0:0:0:0:0:0:1]:56458] logged in with entity id 708 at (-28.5, 64.0, -41.5)
-[09:19:29] [Server thread/INFO]: Bot8 joined the game
-[09:19:31] [Server thread/INFO]: Bot9[/[0:0:0:0:0:0:0:1]:56463] logged in with entity id 713 at (-24.5, 65.0, -23.5)
-[09:19:31] [Server thread/INFO]: Bot9 joined the game
-[09:19:33] [Server thread/INFO]: Bot10[/[0:0:0:0:0:0:0:1]:56465] logged in with entity id 720 at (-25.5, 70.0, -38.5)
-[09:19:33] [Server thread/INFO]: Bot10 joined the game
-[09:19:34] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to Bot0]
-[09:19:34] [Server thread/WARN]: TheDevAtlas moved too quickly! -25.522293658761114,-30.771244680644358,-18.841761771167587
-[09:19:35] [Server thread/INFO]: Bot11[/[0:0:0:0:0:0:0:1]:56467] logged in with entity id 726 at (-32.5, 78.0, -39.5)
-[09:19:35] [Server thread/INFO]: Bot11 joined the game
-[09:19:37] [Server thread/INFO]: Bot12[/[0:0:0:0:0:0:0:1]:56470] logged in with entity id 731 at (-38.5, 68.0, -41.5)
-[09:19:37] [Server thread/INFO]: Bot12 joined the game
-[09:19:38] [Server thread/WARN]: Bot7 moved too quickly! 28.5,0.0,27.5
-[09:19:39] [Server thread/INFO]: Bot13[/[0:0:0:0:0:0:0:1]:56473] logged in with entity id 737 at (-31.5, 67.0, -29.5)
-[09:19:39] [Server thread/INFO]: Bot13 joined the game
-[09:19:41] [Server thread/INFO]: Bot14[/[0:0:0:0:0:0:0:1]:56475] logged in with entity id 747 at (-31.5, 65.0, -33.5)
-[09:19:41] [Server thread/INFO]: Bot14 joined the game
-[09:19:44] [Server thread/INFO]: Bot15[/127.0.0.1:56480] logged in with entity id 755 at (-23.5, 70.0, -26.5)
-[09:19:44] [Server thread/INFO]: Bot15 joined the game
-[09:19:46] [Server thread/INFO]: Bot16[/127.0.0.1:56485] logged in with entity id 760 at (-41.5, 67.0, -27.5)
-[09:19:46] [Server thread/INFO]: Bot16 joined the game
-[09:19:48] [Server thread/INFO]: Bot17[/127.0.0.1:56489] logged in with entity id 764 at (-41.5, 65.0, -39.5)
-[09:19:48] [Server thread/INFO]: Bot17 joined the game
-[09:19:50] [Server thread/INFO]: Bot18[/127.0.0.1:56494] logged in with entity id 766 at (-21.5, 71.0, -36.5)
-[09:19:50] [Server thread/INFO]: Bot18 joined the game
-[09:19:52] [Server thread/INFO]: Bot19[/127.0.0.1:56499] logged in with entity id 772 at (-32.5, 70.0, -30.5)
-[09:19:52] [Server thread/INFO]: Bot19 joined the game
-[09:19:54] [Server thread/INFO]: Bot20[/127.0.0.1:56504] logged in with entity id 780 at (-25.5, 68.0, -32.5)
-[09:19:54] [Server thread/INFO]: Bot20 joined the game
-[09:19:56] [Server thread/INFO]: Bot21[/127.0.0.1:56508] logged in with entity id 785 at (-26.5, 70.0, -38.5)
-[09:19:56] [Server thread/INFO]: Bot21 joined the game
-[09:19:58] [Server thread/INFO]: Bot22[/127.0.0.1:56512] logged in with entity id 790 at (-40.5, 64.0, -23.5)
-[09:19:58] [Server thread/INFO]: Bot22 joined the game
-[09:19:59] [Server thread/INFO]: Bot8 lost connection: Timed out
-[09:19:59] [Server thread/INFO]: Bot8 left the game
-[09:20:00] [Server thread/INFO]: Bot23[/127.0.0.1:56517] logged in with entity id 793 at (-36.5, 64.0, -26.5)
-[09:20:00] [Server thread/INFO]: Bot23 joined the game
-[09:20:01] [Server thread/INFO]: Bot9 lost connection: Timed out
-[09:20:01] [Server thread/INFO]: Bot9 left the game
-[09:20:02] [Server thread/INFO]: Bot24[/127.0.0.1:56521] logged in with entity id 802 at (-34.5, 70.0, -33.5)
-[09:20:02] [Server thread/INFO]: Bot24 joined the game
-[09:20:03] [Server thread/INFO]: Bot10 lost connection: Timed out
-[09:20:03] [Server thread/INFO]: Bot10 left the game
-[09:20:06] [Server thread/INFO]: Bot11 lost connection: Timed out
-[09:20:06] [Server thread/INFO]: Bot11 left the game
-[09:20:07] [Server thread/INFO]: Bot12 lost connection: Timed out
-[09:20:07] [Server thread/INFO]: Bot12 left the game
-[09:20:10] [Server thread/INFO]: Bot13 lost connection: Timed out
-[09:20:10] [Server thread/INFO]: Bot13 left the game
-[09:20:12] [Server thread/INFO]: Bot14 lost connection: Timed out
-[09:20:12] [Server thread/INFO]: Bot14 left the game
-[09:20:14] [Server thread/INFO]: Bot15 lost connection: Timed out
-[09:20:14] [Server thread/INFO]: Bot15 left the game
-[09:20:17] [Server thread/INFO]: Bot16 lost connection: Timed out
-[09:20:17] [Server thread/INFO]: Bot16 left the game
-[09:20:18] [Server thread/INFO]: Bot17 lost connection: Timed out
-[09:20:18] [Server thread/INFO]: Bot17 left the game
-[09:20:20] [Server thread/INFO]: Bot18 lost connection: Timed out
-[09:20:20] [Server thread/INFO]: Bot18 left the game
-[09:20:22] [Server thread/INFO]: Bot19 lost connection: Timed out
-[09:20:22] [Server thread/INFO]: Bot19 left the game
-[09:20:24] [Server thread/INFO]: Bot20 lost connection: Timed out
-[09:20:24] [Server thread/INFO]: Bot20 left the game
-[09:20:26] [Server thread/INFO]: Bot21 lost connection: Timed out
-[09:20:26] [Server thread/INFO]: Bot21 left the game
-[09:20:28] [Server thread/INFO]: Bot22 lost connection: Timed out
-[09:20:28] [Server thread/INFO]: Bot22 left the game
-[09:20:29] [Server thread/WARN]: Bot23 moved too quickly! 36.5,0.0,26.5
-[09:20:30] [Server thread/WARN]: Bot24 moved too quickly! 34.5,-0.07840000152587834,33.5
-[09:20:30] [Server thread/INFO]: Bot23 lost connection: Timed out
-[09:20:30] [Server thread/INFO]: Bot23 left the game
-[09:21:08] [Server thread/INFO]: Bot0 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot0 left the game
-[09:21:08] [Server thread/INFO]: Bot1 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot1 left the game
-[09:21:08] [Server thread/INFO]: Bot2 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot2 left the game
-[09:21:08] [Server thread/INFO]: Bot3 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot3 left the game
-[09:21:08] [Server thread/INFO]: Bot4 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot4 left the game
-[09:21:08] [Server thread/INFO]: Bot5 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot5 left the game
-[09:21:08] [Server thread/INFO]: Bot6 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot6 left the game
-[09:21:08] [Server thread/INFO]: Bot7 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot7 left the game
-[09:21:08] [Server thread/INFO]: Bot24 lost connection: Disconnected
-[09:21:08] [Server thread/INFO]: Bot24 left the game
-[09:21:54] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:56545] logged in with entity id 1017 at (-26.5, 65.0, -24.5)
-[09:21:54] [Server thread/INFO]: Bot0 joined the game
-[09:21:55] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
-[09:21:55] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:56549] logged in with entity id 1021 at (-28.5, 65.0, -28.5)
-[09:21:55] [Server thread/INFO]: Bot1 joined the game
-[09:21:56] [Server thread/INFO]: [Not Secure] <Bot1> I have joined
-[09:21:57] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:56551] logged in with entity id 1034 at (-21.5, 69.0, -31.5)
-[09:21:57] [Server thread/INFO]: Bot2 joined the game
-[09:21:59] [Server thread/INFO]: [Not Secure] <Bot2> I have joined
-[09:21:59] [Server thread/INFO]: Bot3[/[0:0:0:0:0:0:0:1]:56554] logged in with entity id 1040 at (-35.5, 70.0, -33.5)
-[09:21:59] [Server thread/INFO]: Bot3 joined the game
-[09:22:01] [Server thread/INFO]: [Not Secure] <Bot3> I have joined
-[09:22:01] [Server thread/INFO]: Bot4[/[0:0:0:0:0:0:0:1]:56556] logged in with entity id 1047 at (-38.5, 66.0, -26.5)
-[09:22:01] [Server thread/INFO]: Bot4 joined the game
-[09:22:03] [Server thread/INFO]: Bot5[/[0:0:0:0:0:0:0:1]:56558] logged in with entity id 1057 at (-40.5, 65.0, -39.5)
-[09:22:03] [Server thread/INFO]: Bot5 joined the game
-[09:22:04] [Server thread/INFO]: [Not Secure] <Bot4> I have joined
-[09:22:05] [Server thread/INFO]: Bot6[/[0:0:0:0:0:0:0:1]:56561] logged in with entity id 1061 at (-34.5, 70.0, -35.5)
-[09:22:05] [Server thread/INFO]: Bot6 joined the game
-[09:22:07] [Server thread/INFO]: [Not Secure] <Bot5> I have joined
-[09:22:08] [Server thread/INFO]: Bot7[/[0:0:0:0:0:0:0:1]:56563] logged in with entity id 1067 at (-28.5, 64.0, -27.5)
-[09:22:08] [Server thread/INFO]: Bot7 joined the game
-[09:22:09] [Server thread/INFO]: Bot8[/[0:0:0:0:0:0:0:1]:56567] logged in with entity id 1074 at (-28.5, 64.0, -41.5)
-[09:22:09] [Server thread/INFO]: Bot8 joined the game
-[09:22:12] [Server thread/INFO]: Bot9[/[0:0:0:0:0:0:0:1]:56570] logged in with entity id 1080 at (-24.5, 65.0, -23.5)
-[09:22:12] [Server thread/INFO]: Bot9 joined the game
-[09:22:13] [Server thread/INFO]: [Not Secure] <Bot6> I have joined
-[09:22:14] [Server thread/INFO]: Bot10[/[0:0:0:0:0:0:0:1]:56573] logged in with entity id 1081 at (-25.5, 70.0, -38.5)
-[09:22:14] [Server thread/INFO]: Bot10 joined the game
-[09:22:15] [Server thread/INFO]: Bot0 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot0 left the game
-[09:22:15] [Server thread/INFO]: Bot1 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot1 left the game
-[09:22:15] [Server thread/INFO]: Bot2 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot2 left the game
-[09:22:15] [Server thread/INFO]: Bot3 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot3 left the game
-[09:22:15] [Server thread/INFO]: Bot4 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot4 left the game
-[09:22:15] [Server thread/INFO]: Bot5 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot5 left the game
-[09:22:15] [Server thread/INFO]: Bot6 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot6 left the game
-[09:22:15] [Server thread/INFO]: Bot7 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot7 left the game
-[09:22:15] [Server thread/INFO]: Bot8 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot8 left the game
-[09:22:15] [Server thread/INFO]: Bot9 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot9 left the game
-[09:22:15] [Server thread/INFO]: Bot10 lost connection: Disconnected
-[09:22:15] [Server thread/INFO]: Bot10 left the game
-[09:22:18] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:56579] logged in with entity id 1086 at (-26.5, 65.0, -24.5)
-[09:22:18] [Server thread/INFO]: Bot0 joined the game
-[09:22:19] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
-[09:22:19] [Server thread/INFO]: Bot0 lost connection: Disconnected
-[09:22:19] [Server thread/INFO]: Bot0 left the game
-[09:22:50] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:56590] logged in with entity id 1192 at (-26.5, 65.0, -24.5)
-[09:22:50] [Server thread/INFO]: Bot0 joined the game
-[09:22:51] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
-[09:22:52] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:56594] logged in with entity id 1195 at (-28.5, 65.0, -28.5)
-[09:22:52] [Server thread/INFO]: Bot1 joined the game
-[09:22:52] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to Bot0]
-[09:22:52] [Server thread/WARN]: TheDevAtlas moved too quickly! -9.002299458938982,-23.21231825327638,-1.4665085345786402
-[09:22:52] [Server thread/WARN]: TheDevAtlas moved too quickly! -9.002299458938982,-23.21231825327638,-1.4665085345786402
-[09:22:52] [Server thread/WARN]: TheDevAtlas moved too quickly! -9.002299458938982,-23.21231825327638,-1.4665085345786402
-[09:22:52] [Server thread/WARN]: TheDevAtlas moved too quickly! -9.002299458938982,-23.21231825327638,-1.4665085345786402
-[09:22:53] [Server thread/INFO]: [Not Secure] <Bot1> I have joined
-[09:22:54] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:56596] logged in with entity id 1200 at (-21.5, 69.0, -31.5)
-[09:22:54] [Server thread/INFO]: Bot2 joined the game
-[09:22:55] [Server thread/INFO]: [Not Secure] <Bot2> I have joined
-[09:22:56] [Server thread/INFO]: Bot3[/[0:0:0:0:0:0:0:1]:56599] logged in with entity id 1201 at (-35.5, 70.0, -33.5)
-[09:22:56] [Server thread/INFO]: Bot3 joined the game
-[09:22:57] [Server thread/INFO]: [Not Secure] <Bot3> I have joined
-[09:22:58] [Server thread/INFO]: Bot4[/[0:0:0:0:0:0:0:1]:56603] logged in with entity id 1211 at (-38.5, 66.0, -26.5)
-[09:22:58] [Server thread/INFO]: Bot4 joined the game
-[09:23:00] [Server thread/INFO]: Bot5[/[0:0:0:0:0:0:0:1]:56605] logged in with entity id 1224 at (-40.5, 65.0, -39.5)
-[09:23:00] [Server thread/INFO]: Bot5 joined the game
-[09:23:00] [Server thread/INFO]: [Not Secure] <Bot4> I have joined
-[09:23:02] [Server thread/INFO]: Bot6[/[0:0:0:0:0:0:0:1]:56608] logged in with entity id 1241 at (-34.5, 70.0, -35.5)
-[09:23:02] [Server thread/INFO]: Bot6 joined the game
-[09:23:04] [Server thread/INFO]: Bot7[/[0:0:0:0:0:0:0:1]:56610] logged in with entity id 1248 at (-28.5, 64.0, -27.5)
-[09:23:04] [Server thread/INFO]: Bot7 joined the game
-[09:23:05] [Server thread/INFO]: [Not Secure] <Bot5> I have joined
-[09:23:06] [Server thread/INFO]: Bot8[/[0:0:0:0:0:0:0:1]:56615] logged in with entity id 1258 at (-28.5, 64.0, -41.5)
-[09:23:06] [Server thread/INFO]: Bot8 joined the game
-[09:23:08] [Server thread/INFO]: Bot9[/[0:0:0:0:0:0:0:1]:56619] logged in with entity id 1259 at (-24.5, 65.0, -23.5)
-[09:23:08] [Server thread/INFO]: Bot9 joined the game
-[09:23:10] [Server thread/INFO]: Bot10[/[0:0:0:0:0:0:0:1]:56621] logged in with entity id 1260 at (-25.5, 70.0, -38.5)
-[09:23:10] [Server thread/INFO]: Bot10 joined the game
-[09:23:12] [Server thread/INFO]: Bot11[/[0:0:0:0:0:0:0:1]:56623] logged in with entity id 1266 at (-32.5, 78.0, -39.5)
-[09:23:12] [Server thread/INFO]: Bot11 joined the game
-[09:23:14] [Server thread/INFO]: Bot12[/[0:0:0:0:0:0:0:1]:56626] logged in with entity id 1272 at (-38.5, 68.0, -41.5)
-[09:23:14] [Server thread/INFO]: Bot12 joined the game
-[09:23:14] [Server thread/INFO]: [Not Secure] <Bot6> I have joined
-[09:23:16] [Server thread/INFO]: Bot13[/127.0.0.1:56630] logged in with entity id 1275 at (-31.5, 67.0, -29.5)
-[09:23:16] [Server thread/INFO]: Bot13 joined the game
-[09:23:18] [Server thread/INFO]: Bot14[/[0:0:0:0:0:0:0:1]:56632] logged in with entity id 1279 at (-31.5, 65.0, -33.5)
-[09:23:18] [Server thread/INFO]: Bot14 joined the game
-[09:23:20] [Server thread/INFO]: Bot15[/127.0.0.1:56637] logged in with entity id 1282 at (-23.5, 70.0, -26.5)
-[09:23:20] [Server thread/INFO]: Bot15 joined the game
-[09:23:22] [Server thread/INFO]: Bot16[/[0:0:0:0:0:0:0:1]:56639] logged in with entity id 1290 at (-41.5, 67.0, -27.5)
-[09:23:22] [Server thread/INFO]: Bot16 joined the game
-[09:23:24] [Server thread/INFO]: Bot17[/[0:0:0:0:0:0:0:1]:56641] logged in with entity id 1295 at (-41.5, 65.0, -39.5)
-[09:23:24] [Server thread/INFO]: Bot17 joined the game
-[09:23:26] [Server thread/INFO]: Bot18[/[0:0:0:0:0:0:0:1]:56644] logged in with entity id 1297 at (-21.5, 71.0, -36.5)
-[09:23:26] [Server thread/INFO]: Bot18 joined the game
-[09:23:28] [Server thread/INFO]: Bot19[/[0:0:0:0:0:0:0:1]:56646] logged in with entity id 1304 at (-32.5, 70.0, -30.5)
-[09:23:28] [Server thread/INFO]: Bot19 joined the game
-[09:23:30] [Server thread/INFO]: Bot20[/[0:0:0:0:0:0:0:1]:56648] logged in with entity id 1307 at (-25.5, 68.0, -32.5)
-[09:23:30] [Server thread/INFO]: Bot20 joined the game
-[09:23:31] [Server thread/INFO]: [Not Secure] <Bot7> I have joined
-[09:23:32] [Server thread/INFO]: Bot21[/[0:0:0:0:0:0:0:1]:56651] logged in with entity id 1311 at (-26.5, 70.0, -38.5)
-[09:23:32] [Server thread/INFO]: Bot21 joined the game
-[09:23:34] [Server thread/INFO]: Bot7 lost connection: Timed out
-[09:23:34] [Server thread/INFO]: Bot7 left the game
-[09:23:34] [Server thread/INFO]: Bot22[/[0:0:0:0:0:0:0:1]:56653] logged in with entity id 1315 at (-40.5, 64.0, -23.5)
-[09:23:34] [Server thread/INFO]: Bot22 joined the game
-[09:23:36] [Server thread/INFO]: Bot8 lost connection: Timed out
-[09:23:36] [Server thread/INFO]: Bot8 left the game
-[09:23:37] [Server thread/INFO]: Bot23[/127.0.0.1:56657] logged in with entity id 1328 at (-36.5, 64.0, -26.5)
-[09:23:37] [Server thread/INFO]: Bot23 joined the game
-[09:23:38] [Server thread/INFO]: Bot9 lost connection: Timed out
-[09:23:38] [Server thread/INFO]: Bot9 left the game
-[09:23:39] [Server thread/INFO]: Bot24[/127.0.0.1:56662] logged in with entity id 1332 at (-34.5, 70.0, -33.5)
-[09:23:39] [Server thread/INFO]: Bot24 joined the game
-[09:23:40] [Server thread/INFO]: Bot10 lost connection: Timed out
-[09:23:40] [Server thread/INFO]: Bot10 left the game
-[09:23:42] [Server thread/INFO]: Bot11 lost connection: Timed out
-[09:23:42] [Server thread/INFO]: Bot11 left the game
-[09:23:44] [Server thread/INFO]: Bot12 lost connection: Timed out
-[09:23:44] [Server thread/INFO]: Bot12 left the game
-[09:23:45] [Server thread/INFO]: Bot0 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot0 left the game
-[09:23:45] [Server thread/INFO]: Bot1 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot1 left the game
-[09:23:45] [Server thread/INFO]: Bot2 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot2 left the game
-[09:23:45] [Server thread/INFO]: Bot3 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot3 left the game
-[09:23:45] [Server thread/INFO]: Bot4 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot4 left the game
-[09:23:45] [Server thread/INFO]: Bot5 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot5 left the game
-[09:23:45] [Server thread/INFO]: Bot6 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot6 left the game
-[09:23:45] [Server thread/INFO]: Bot13 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot13 left the game
-[09:23:45] [Server thread/INFO]: Bot14 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot14 left the game
-[09:23:45] [Server thread/INFO]: Bot15 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot15 left the game
-[09:23:45] [Server thread/INFO]: Bot16 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot16 left the game
-[09:23:45] [Server thread/INFO]: Bot17 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot17 left the game
-[09:23:45] [Server thread/INFO]: Bot18 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot18 left the game
-[09:23:45] [Server thread/INFO]: Bot19 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot19 left the game
-[09:23:45] [Server thread/INFO]: Bot20 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot20 left the game
-[09:23:45] [Server thread/INFO]: Bot21 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot21 left the game
-[09:23:45] [Server thread/INFO]: Bot22 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot22 left the game
-[09:23:45] [Server thread/INFO]: Bot23 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot23 left the game
-[09:23:45] [Server thread/INFO]: Bot24 lost connection: Disconnected
-[09:23:45] [Server thread/INFO]: Bot24 left the game
-[09:23:46] [Server thread/INFO]: TheDevAtlas lost connection: Disconnected
-[09:23:46] [Server thread/INFO]: TheDevAtlas left the game
+[10:20:20] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10:20:21] [ServerMain/INFO]: Loaded 7 recipes
+[10:20:21] [ServerMain/INFO]: Loaded 1271 advancements
+[10:20:21] [Server thread/INFO]: Starting minecraft server version 1.20
+[10:20:21] [Server thread/INFO]: Loading properties
+[10:20:21] [Server thread/INFO]: Default game type: SURVIVAL
+[10:20:21] [Server thread/INFO]: Generating keypair
+[10:20:21] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:20:21] [Server thread/INFO]: Using default channel type
+[10:20:21] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[10:20:21] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[10:20:21] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[10:20:21] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[10:20:21] [Server thread/INFO]: Preparing level "world"
+[10:20:22] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[10:20:23] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[10:20:23] [Worker-Main-20/INFO]: Preparing spawn area: 0%
+[10:20:23] [Worker-Main-20/INFO]: Preparing spawn area: 0%
+[10:20:23] [Worker-Main-4/INFO]: Preparing spawn area: 31%
+[10:20:24] [Server thread/INFO]: Time elapsed: 1736 ms
+[10:20:24] [Server thread/INFO]: Done (2.228s)! For help, type "help"
+[10:21:08] [Server thread/INFO]: TheDevAtlas[/127.0.0.1:60727] logged in with entity id 202 at (-23.66374992119355, 81.57769300670243, -15.476966663288517)
+[10:21:08] [Server thread/INFO]: TheDevAtlas joined the game
+[10:25:03] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:60811] logged in with entity id 613 at (-26.7, 65.0, -25.76175925925009)
+[10:25:03] [Server thread/INFO]: Bot0 joined the game
+[10:25:03] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:60815] logged in with entity id 615 at (-29.7, 65.0, -29.108171970175764)
+[10:25:03] [Server thread/INFO]: Bot1 joined the game
+[10:25:04] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
+[10:25:04] [Server thread/INFO]: [Not Secure] <Bot1> I have joined
+[10:25:04] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:60818] logged in with entity id 616 at (-21.5, 69.0, -31.5)
+[10:25:04] [Server thread/INFO]: Bot2 joined the game
+[10:25:05] [Server thread/INFO]: Bot0 lost connection: Disconnected
+[10:25:05] [Server thread/INFO]: Bot0 left the game
+[10:25:05] [Server thread/INFO]: Bot1 lost connection: Disconnected
+[10:25:05] [Server thread/INFO]: Bot1 left the game
+[10:25:05] [Server thread/INFO]: Bot2 lost connection: Disconnected
+[10:25:05] [Server thread/INFO]: Bot2 left the game
+[10:25:17] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:60826] logged in with entity id 643 at (-26.7, 65.0, -25.76175925925009)
+[10:25:17] [Server thread/INFO]: Bot0 joined the game
+[10:25:18] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:60830] logged in with entity id 646 at (-29.7, 65.0, -29.108171970175764)
+[10:25:18] [Server thread/INFO]: Bot1 joined the game
+[10:25:18] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
+[10:25:19] [Server thread/INFO]: [Not Secure] <Bot1> I have joined
+[10:25:19] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:60833] logged in with entity id 649 at (-21.5, 69.0, -31.5)
+[10:25:19] [Server thread/INFO]: Bot2 joined the game
+[10:25:19] [Server thread/INFO]: Bot0 lost connection: Disconnected
+[10:25:19] [Server thread/INFO]: Bot0 left the game
+[10:25:19] [Server thread/INFO]: Bot1 lost connection: Disconnected
+[10:25:19] [Server thread/INFO]: Bot1 left the game
+[10:25:19] [Server thread/INFO]: Bot2 lost connection: Disconnected
+[10:25:19] [Server thread/INFO]: Bot2 left the game
+[10:26:52] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:60851] logged in with entity id 823 at (-26.7, 65.0, -25.76175925925009)
+[10:26:52] [Server thread/INFO]: Bot0 joined the game
+[10:26:53] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:60857] logged in with entity id 832 at (-29.7, 65.0, -29.108171970175764)
+[10:26:53] [Server thread/INFO]: Bot1 joined the game
+[10:26:53] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
+[10:26:53] [Server thread/INFO]: [Not Secure] <Bot1> I have joined
+[10:26:54] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:60861] logged in with entity id 840 at (-21.5, 69.0, -31.5)
+[10:26:54] [Server thread/INFO]: Bot2 joined the game
+[10:26:54] [Server thread/INFO]: Bot0 lost connection: Disconnected
+[10:26:54] [Server thread/INFO]: Bot0 left the game
+[10:26:54] [Server thread/INFO]: Bot1 lost connection: Disconnected
+[10:26:54] [Server thread/INFO]: Bot1 left the game
+[10:26:54] [Server thread/INFO]: Bot2 lost connection: Disconnected
+[10:26:54] [Server thread/INFO]: Bot2 left the game
+[10:37:33] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:61047] logged in with entity id 2089 at (-26.7, 65.0, -25.76175925925009)
+[10:37:33] [Server thread/INFO]: Bot0 joined the game
+[10:37:34] [Server thread/INFO]: Bot1[/[0:0:0:0:0:0:0:1]:61051] logged in with entity id 2091 at (-29.7, 65.0, -29.108171970175764)
+[10:37:34] [Server thread/INFO]: Bot1 joined the game
+[10:37:34] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
+[10:37:35] [Server thread/INFO]: Bot2[/[0:0:0:0:0:0:0:1]:61054] logged in with entity id 2094 at (-21.5, 69.0, -31.5)
+[10:37:35] [Server thread/INFO]: Bot2 joined the game
+[10:37:36] [Server thread/INFO]: Bot3[/[0:0:0:0:0:0:0:1]:61057] logged in with entity id 2098 at (-35.7, 70.0, -32.53399463100166)
+[10:37:36] [Server thread/INFO]: Bot3 joined the game
+[10:37:37] [Server thread/INFO]: Bot4[/[0:0:0:0:0:0:0:1]:61059] logged in with entity id 2108 at (-38.5, 66.0, -26.5)
+[10:37:37] [Server thread/INFO]: Bot4 joined the game
+[10:37:38] [Server thread/INFO]: Bot5[/[0:0:0:0:0:0:0:1]:61061] logged in with entity id 2112 at (-40.5, 65.0, -39.5)
+[10:37:38] [Server thread/INFO]: Bot5 joined the game
+[10:37:39] [Server thread/INFO]: Bot6[/[0:0:0:0:0:0:0:1]:61064] logged in with entity id 2117 at (-34.7, 70.0, -36.28123669123101)
+[10:37:39] [Server thread/INFO]: Bot6 joined the game
+[10:37:40] [Server thread/INFO]: Bot7[/[0:0:0:0:0:0:0:1]:61066] logged in with entity id 2118 at (-29.7, 64.0, -27.7)
+[10:37:40] [Server thread/INFO]: Bot7 joined the game
+[10:37:41] [Server thread/INFO]: Bot8[/[0:0:0:0:0:0:0:1]:61068] logged in with entity id 2122 at (-28.5, 64.0, -41.5)
+[10:37:41] [Server thread/INFO]: Bot8 joined the game
+[10:37:42] [Server thread/INFO]: Bot9[/[0:0:0:0:0:0:0:1]:61071] logged in with entity id 2127 at (-23.993087119274826, 65.0, -25.42151209473363)
+[10:37:42] [Server thread/INFO]: Bot9 joined the game
+[10:37:42] [Server thread/INFO]: [Not Secure] <Bot1> I have joined
+[10:37:43] [Server thread/INFO]: Bot10[/[0:0:0:0:0:0:0:1]:61074] logged in with entity id 2133 at (-25.5, 70.0, -38.5)
+[10:37:43] [Server thread/INFO]: Bot10 joined the game
+[10:37:44] [Server thread/INFO]: Bot11[/[0:0:0:0:0:0:0:1]:61076] logged in with entity id 2134 at (-32.5, 78.0, -39.5)
+[10:37:44] [Server thread/INFO]: Bot11 joined the game
+[10:37:45] [Server thread/INFO]: Bot12[/[0:0:0:0:0:0:0:1]:61079] logged in with entity id 2137 at (-38.5, 68.0, -41.5)
+[10:37:45] [Server thread/INFO]: Bot12 joined the game
+[10:37:47] [Server thread/INFO]: Bot13[/[0:0:0:0:0:0:0:1]:61082] logged in with entity id 2145 at (-31.7, 67.0, -29.3)
+[10:37:47] [Server thread/INFO]: Bot13 joined the game
+[10:37:47] [Server thread/INFO]: Bot14[/[0:0:0:0:0:0:0:1]:61084] logged in with entity id 2146 at (-31.5, 65.0, -33.5)
+[10:37:47] [Server thread/INFO]: Bot14 joined the game
+[10:37:49] [Server thread/INFO]: Bot15[/[0:0:0:0:0:0:0:1]:61086] logged in with entity id 2147 at (-23.5, 70.0, -26.5)
+[10:37:49] [Server thread/INFO]: Bot15 joined the game
+[10:37:50] [Server thread/INFO]: Bot16[/[0:0:0:0:0:0:0:1]:61089] logged in with entity id 2148 at (-41.5, 67.0, -27.5)
+[10:37:50] [Server thread/INFO]: Bot16 joined the game
+[10:37:51] [Server thread/INFO]: Bot17[/[0:0:0:0:0:0:0:1]:61092] logged in with entity id 2160 at (-41.5, 65.0, -39.5)
+[10:37:51] [Server thread/INFO]: Bot17 joined the game
+[10:37:51] [Server thread/INFO]: Bot18[/[0:0:0:0:0:0:0:1]:61095] logged in with entity id 2162 at (-21.5, 71.0, -36.5)
+[10:37:51] [Server thread/INFO]: Bot18 joined the game
+[10:37:53] [Server thread/INFO]: Bot19[/[0:0:0:0:0:0:0:1]:61097] logged in with entity id 2164 at (-32.5, 70.0, -30.5)
+[10:37:53] [Server thread/INFO]: Bot19 joined the game
+[10:37:53] [Server thread/INFO]: Bot20[/[0:0:0:0:0:0:0:1]:61100] logged in with entity id 2165 at (-25.5, 68.0, -32.5)
+[10:37:53] [Server thread/INFO]: Bot20 joined the game
+[10:37:55] [Server thread/INFO]: Bot21[/[0:0:0:0:0:0:0:1]:61102] logged in with entity id 2167 at (-26.5, 70.0, -38.5)
+[10:37:55] [Server thread/INFO]: Bot21 joined the game
+[10:37:55] [Server thread/INFO]: Bot22[/[0:0:0:0:0:0:0:1]:61106] logged in with entity id 2169 at (-40.5, 64.0, -23.5)
+[10:37:55] [Server thread/INFO]: Bot22 joined the game
+[10:37:56] [Server thread/INFO]: Bot23[/[0:0:0:0:0:0:0:1]:61108] logged in with entity id 2170 at (-36.5, 64.0, -26.5)
+[10:37:56] [Server thread/INFO]: Bot23 joined the game
+[10:37:57] [Server thread/INFO]: Bot24[/[0:0:0:0:0:0:0:1]:61110] logged in with entity id 2175 at (-34.5, 70.0, -33.5)
+[10:37:57] [Server thread/INFO]: Bot24 joined the game
+[10:38:05] [Server thread/INFO]: Bot2 lost connection: Timed out
+[10:38:05] [Server thread/INFO]: Bot2 left the game
+[10:38:05] [Server thread/WARN]: handleDisconnection() called twice
+[10:38:06] [Server thread/INFO]: Bot3 lost connection: Timed out
+[10:38:06] [Server thread/INFO]: Bot3 left the game
+[10:38:07] [Server thread/INFO]: Bot4 lost connection: Timed out
+[10:38:07] [Server thread/INFO]: Bot4 left the game
+[10:38:08] [Server thread/INFO]: Bot5 lost connection: Timed out
+[10:38:08] [Server thread/INFO]: Bot5 left the game
+[10:38:09] [Server thread/INFO]: Bot6 lost connection: Timed out
+[10:38:09] [Server thread/INFO]: Bot6 left the game
+[10:38:10] [Server thread/INFO]: Bot7 lost connection: Timed out
+[10:38:10] [Server thread/INFO]: Bot7 left the game
+[10:38:11] [Server thread/INFO]: Bot8 lost connection: Timed out
+[10:38:11] [Server thread/INFO]: Bot8 left the game
+[10:38:12] [Server thread/INFO]: Bot9 lost connection: Timed out
+[10:38:12] [Server thread/INFO]: Bot9 left the game
+[10:38:13] [Server thread/INFO]: Bot10 lost connection: Timed out
+[10:38:13] [Server thread/INFO]: Bot10 left the game
+[10:38:14] [Server thread/INFO]: Bot11 lost connection: Timed out
+[10:38:14] [Server thread/INFO]: Bot11 left the game
+[10:38:16] [Server thread/INFO]: Bot12 lost connection: Timed out
+[10:38:16] [Server thread/INFO]: Bot12 left the game
+[10:38:17] [Server thread/INFO]: Bot13 lost connection: Timed out
+[10:38:17] [Server thread/INFO]: Bot13 left the game
+[10:38:17] [Server thread/INFO]: Bot14 lost connection: Timed out
+[10:38:17] [Server thread/INFO]: Bot14 left the game
+[10:38:19] [Server thread/INFO]: Bot15 lost connection: Timed out
+[10:38:19] [Server thread/INFO]: Bot15 left the game
+[10:38:20] [Server thread/INFO]: Bot16 lost connection: Timed out
+[10:38:20] [Server thread/INFO]: Bot16 left the game
+[10:38:21] [Server thread/INFO]: Bot17 lost connection: Timed out
+[10:38:21] [Server thread/INFO]: Bot17 left the game
+[10:38:22] [Server thread/INFO]: Bot18 lost connection: Timed out
+[10:38:22] [Server thread/INFO]: Bot18 left the game
+[10:38:23] [Server thread/INFO]: Bot19 lost connection: Timed out
+[10:38:23] [Server thread/INFO]: Bot19 left the game
+[10:38:23] [Server thread/INFO]: Bot20 lost connection: Timed out
+[10:38:23] [Server thread/INFO]: Bot20 left the game
+[10:38:24] [Server thread/INFO]: Bot0 lost connection: Disconnected
+[10:38:24] [Server thread/INFO]: Bot0 left the game
+[10:38:24] [Server thread/INFO]: Bot1 lost connection: Disconnected
+[10:38:24] [Server thread/INFO]: Bot1 left the game
+[10:38:24] [Server thread/INFO]: Bot21 lost connection: Disconnected
+[10:38:24] [Server thread/INFO]: Bot21 left the game
+[10:38:24] [Server thread/INFO]: Bot22 lost connection: Disconnected
+[10:38:24] [Server thread/INFO]: Bot22 left the game
+[10:38:24] [Server thread/INFO]: Bot23 lost connection: Disconnected
+[10:38:24] [Server thread/INFO]: Bot23 left the game
+[10:38:24] [Server thread/INFO]: Bot24 lost connection: Disconnected
+[10:38:24] [Server thread/INFO]: Bot24 left the game
+[10:40:26] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:61130] logged in with entity id 2481 at (-24.5, 65.0, -23.5)
+[10:40:26] [Server thread/INFO]: Bot0 joined the game
+[10:40:27] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
+[10:42:48] [Server thread/INFO]: Bot0 was slain by TheDevAtlas
+[10:42:48] [Server thread/WARN]: Bot0 moved too quickly! -32.2,1.0,-11.2
+[10:43:05] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to Bot0]
+[10:43:05] [Server thread/WARN]: TheDevAtlas moved too quickly! 6.956477288474854,2.0,8.883385178890183
+[10:43:46] [Server thread/INFO]: Bot0 lost connection: Disconnected
+[10:43:46] [Server thread/INFO]: Bot0 left the game
+[10:49:05] [Server thread/INFO]: Bot0[/[0:0:0:0:0:0:0:1]:61299] logged in with entity id 3508 at (-18.3, 67.0, -18.5)
+[10:49:05] [Server thread/INFO]: Bot0 joined the game
+[10:49:06] [Server thread/INFO]: [Not Secure] <Bot0> I have joined
+[10:49:07] [Server thread/INFO]: Bot0 lost connection: Disconnected
+[10:49:07] [Server thread/INFO]: Bot0 left the game
+[10:51:04] [Server thread/INFO]: pathfinder_Bot[/[0:0:0:0:0:0:0:1]:61745] logged in with entity id 3733 at (-37.5, 64.0, -23.5)
+[10:51:04] [Server thread/INFO]: pathfinder_Bot joined the game
+[10:52:15] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to pathfinder_Bot]
+[10:52:15] [Server thread/WARN]: TheDevAtlas moved too quickly! -18.597551029244165,-2.282718544386057,-7.476562221805665
+[10:52:15] [Server thread/WARN]: TheDevAtlas moved too quickly! -18.597551029244165,-2.282718544386057,-7.476562221805665
+[10:52:15] [Server thread/WARN]: TheDevAtlas moved too quickly! -18.597551029244165,-2.282718544386057,-7.476562221805665
+[10:52:15] [Server thread/WARN]: TheDevAtlas moved too quickly! -18.597551029244165,-2.282718544386057,-7.476562221805665
+[10:52:43] [Server thread/INFO]: [TheDevAtlas: Teleported pathfinder_Bot to TheDevAtlas]
+[10:53:02] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to pathfinder_Bot]
+[10:53:02] [Server thread/WARN]: TheDevAtlas moved too quickly! -0.5591162996343684,0.0,-10.734431391496702
+[10:53:06] [Server thread/INFO]: [TheDevAtlas: Teleported pathfinder_Bot to TheDevAtlas]
+[10:53:10] [Server thread/INFO]: [TheDevAtlas: Teleported pathfinder_Bot to TheDevAtlas]
+[10:53:33] [Server thread/INFO]: [TheDevAtlas: Teleported pathfinder_Bot to TheDevAtlas]
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:33] [Server thread/WARN]: pathfinder_Bot moved too quickly! -64.27956795091319,-1.0,60.054633071550995
+[10:53:37] [Server thread/INFO]: pathfinder_Bot lost connection: Disconnected
+[10:53:37] [Server thread/INFO]: pathfinder_Bot left the game
+[10:53:40] [Server thread/INFO]: pathfinder_Bot[/[0:0:0:0:0:0:0:1]:61991] logged in with entity id 4196 at (-93.91327913136385, 64.0, 21.912883960116854)
+[10:53:40] [Server thread/INFO]: pathfinder_Bot joined the game
+[10:54:31] [Server thread/INFO]: pathfinder_Bot was slain by TheDevAtlas
+[10:54:38] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to pathfinder_Bot]
+[10:55:32] [Server thread/INFO]: pathfinder_Bot lost connection: Disconnected
+[10:55:32] [Server thread/INFO]: pathfinder_Bot left the game
+[10:55:34] [Server thread/INFO]: pathfinder_Bot[/[0:0:0:0:0:0:0:1]:62199] logged in with entity id 4460 at (-37.5, 64.0, -26.5)
+[10:55:34] [Server thread/INFO]: pathfinder_Bot joined the game
+[10:55:51] [Server thread/INFO]: [TheDevAtlas: Gamerule spawnRadius is now set to: 0]
+[10:55:56] [Server thread/INFO]: [TheDevAtlas: Gamerule spawnRadius is now set to: 10]
+[10:55:57] [Server thread/INFO]: [TheDevAtlas: Gamerule spawnRadius is now set to: 1]
+[10:56:25] [Server thread/INFO]: [TheDevAtlas: Teleported pathfinder_Bot to TheDevAtlas]
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:25] [Server thread/WARN]: pathfinder_Bot moved too quickly! -83.25545996434455,0.0,46.41864978075304
+[10:56:28] [Server thread/INFO]: pathfinder_Bot lost connection: Disconnected
+[10:56:28] [Server thread/INFO]: pathfinder_Bot left the game
+[10:56:31] [Server thread/INFO]: pathfinder_Bot[/[0:0:0:0:0:0:0:1]:62328] logged in with entity id 4691 at (-108.01656959539172, 64.0, 16.499850849084627)
+[10:56:31] [Server thread/INFO]: pathfinder_Bot joined the game
+[10:57:02] [Server thread/INFO]: pathfinder_Bot lost connection: Disconnected
+[10:57:02] [Server thread/INFO]: pathfinder_Bot left the game
+[10:59:08] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62497] logged in with entity id 4998 at (-30.5, 67.0, -30.5)
+[10:59:08] [Server thread/INFO]: lumberjack_Bot joined the game
+[10:59:08] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[10:59:08] [Server thread/INFO]: lumberjack_Bot left the game
+[10:59:15] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62504] logged in with entity id 5016 at (-30.5, 67.0, -30.5)
+[10:59:15] [Server thread/INFO]: lumberjack_Bot joined the game
+[10:59:16] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[10:59:16] [Server thread/INFO]: lumberjack_Bot left the game
+[10:59:36] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to 0.500000, 66.282719, 0.500000]
+[10:59:36] [Server thread/WARN]: TheDevAtlas moved too quickly! 112.3572405306603,0.0,-21.548801558358704
+[10:59:52] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62518] logged in with entity id 5182 at (-30.5, 67.0, -30.5)
+[10:59:52] [Server thread/INFO]: lumberjack_Bot joined the game
+[10:59:53] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[10:59:53] [Server thread/INFO]: lumberjack_Bot left the game
+[11:00:34] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62526] logged in with entity id 5241 at (-30.5, 67.0, -30.5)
+[11:00:34] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:00:35] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:00:35] [Server thread/INFO]: lumberjack_Bot left the game
+[11:01:30] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62537] logged in with entity id 5368 at (-30.5, 67.0, -30.5)
+[11:01:30] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:01:31] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:01:31] [Server thread/INFO]: lumberjack_Bot left the game
+[11:02:08] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62553] logged in with entity id 5437 at (-30.5, 67.0, -30.5)
+[11:02:08] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:02:09] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:02:09] [Server thread/INFO]: lumberjack_Bot left the game
+[11:03:05] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62562] logged in with entity id 5545 at (-30.5, 67.0, -30.5)
+[11:03:05] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:03:06] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:03:06] [Server thread/INFO]: lumberjack_Bot left the game
+[11:03:26] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62571] logged in with entity id 5578 at (-30.5, 67.0, -30.5)
+[11:03:26] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:03:27] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:03:27] [Server thread/INFO]: lumberjack_Bot left the game
+[11:04:57] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62586] logged in with entity id 5737 at (-30.5, 67.0, -30.5)
+[11:04:57] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:05:16] [Server thread/INFO]: [TheDevAtlas: Teleported lumberjack_Bot to TheDevAtlas]
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:16] [Server thread/WARN]: lumberjack_Bot moved too quickly! 15.065884703560515,0.0,52.52278919954459
+[11:05:23] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:05:23] [Server thread/INFO]: lumberjack_Bot left the game
+[11:05:26] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62596] logged in with entity id 5813 at (-15.434115296439485, 67.0, 22.022789199544587)
+[11:05:26] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:05:51] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:05:51] [Server thread/INFO]: lumberjack_Bot left the game
+[11:07:49] [Server thread/INFO]: lumberjack_Bot[/[0:0:0:0:0:0:0:1]:62624] logged in with entity id 6032 at (-15.434115296439485, 67.0, 22.022789199544587)
+[11:07:49] [Server thread/INFO]: lumberjack_Bot joined the game
+[11:12:20] [Server thread/INFO]: lumberjack_Bot lost connection: Disconnected
+[11:12:20] [Server thread/INFO]: lumberjack_Bot left the game
+[11:13:32] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62716] logged in with entity id 6589 at (-30.5, 64.0, -31.5)
+[11:13:32] [Server thread/INFO]: collector joined the game
+[11:13:43] [Server thread/INFO]: [TheDevAtlas: Teleported TheDevAtlas to collector]
+[11:13:43] [Server thread/WARN]: TheDevAtlas moved too quickly! -13.671801610415773,-3.0,-51.98126619410324
+[11:13:43] [Server thread/WARN]: TheDevAtlas moved too quickly! -13.671801610415773,-3.0,-51.98126619410324
+[11:13:43] [Server thread/WARN]: TheDevAtlas moved too quickly! -13.671801610415773,-3.0,-51.98126619410324
+[11:13:43] [Server thread/WARN]: TheDevAtlas moved too quickly! -13.671801610415773,-3.0,-51.98126619410324
+[11:14:07] [Server thread/INFO]: [TheDevAtlas: Teleported collector to TheDevAtlas]
+[11:14:07] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:07] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:07] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:07] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:07] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:07] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:08] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:08] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:08] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:08] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:08] [Server thread/WARN]: collector moved too quickly! -1.0098660165030964,0.0,98.34934026449578
+[11:14:10] [Server thread/INFO]: collector lost connection: Disconnected
+[11:14:10] [Server thread/INFO]: collector left the game
+[11:14:12] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62728] logged in with entity id 6825 at (-31.509866016503096, 64.0, 66.84934026449578)
+[11:14:12] [Server thread/INFO]: collector joined the game
+[11:14:23] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:14:23] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:14:23] [Server thread/INFO]: [Not Secure] <collector> Cannot read properties of undefined (reading 'chestLocations')
+[11:14:55] [Server thread/INFO]: collector lost connection: Disconnected
+[11:14:55] [Server thread/INFO]: collector left the game
+[11:15:23] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62745] logged in with entity id 6949 at (-31.509866016503096, 64.0, 66.84934026449578)
+[11:15:23] [Server thread/INFO]: collector joined the game
+[11:15:26] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect grass
+[11:15:26] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest grass
+[11:15:26] [Server thread/INFO]: [Not Secure] <collector> Cannot read properties of undefined (reading 'chestLocations')
+[11:16:13] [Server thread/INFO]: collector lost connection: Disconnected
+[11:16:13] [Server thread/INFO]: collector left the game
+[11:16:14] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62757] logged in with entity id 7054 at (-31.509866016503096, 64.0, 66.84934026449578)
+[11:16:14] [Server thread/INFO]: collector joined the game
+[11:16:21] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect grass
+[11:16:21] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest grass
+[11:16:29] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:16:29] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:16:38] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect sand
+[11:16:38] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest sand
+[11:17:16] [Server thread/INFO]: collector lost connection: Disconnected
+[11:17:16] [Server thread/INFO]: collector left the game
+[11:17:17] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62776] logged in with entity id 7187 at (-31.509866016503096, 64.0, 66.84934026449578)
+[11:17:17] [Server thread/INFO]: collector joined the game
+[11:17:20] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:17:20] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:18:18] [Server thread/INFO]: collector lost connection: Disconnected
+[11:18:18] [Server thread/INFO]: collector left the game
+[11:18:38] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62810] logged in with entity id 7347 at (-27.67570193118114, 65.0, 68.49999553675336)
+[11:18:38] [Server thread/INFO]: collector joined the game
+[11:18:44] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:18:44] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:18:44] [Server thread/INFO]: collector lost connection: Disconnected
+[11:18:44] [Server thread/INFO]: collector left the game
+[11:19:09] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62823] logged in with entity id 7400 at (-27.67570193118114, 65.0, 68.49999553675336)
+[11:19:09] [Server thread/INFO]: collector joined the game
+[11:19:11] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:19:11] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:19:16] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:19:16] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:19:23] [Server thread/INFO]: collector lost connection: Disconnected
+[11:19:23] [Server thread/INFO]: collector left the game
+[11:21:31] [Server thread/INFO]: collector[/[0:0:0:0:0:0:0:1]:62857] logged in with entity id 7663 at (-26.314936030918048, 65.0, 67.49624015118606)
+[11:21:31] [Server thread/INFO]: collector joined the game
+[11:21:34] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[11:21:34] [Server thread/INFO]: [Not Secure] <collector> Collecting the nearest oak_log
+[11:22:42] [Server thread/INFO]: collector lost connection: Disconnected
+[11:22:42] [Server thread/INFO]: collector left the game
+[12:21:22] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63336] logged in with entity id 13253 at (-30.5, 65.0, -32.5)
+[12:21:22] [Server thread/INFO]: collector2 joined the game
+[12:21:22] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63338] logged in with entity id 13254 at (-31.5, 69.0, -31.5)
+[12:21:22] [Server thread/INFO]: collector3 joined the game
+[12:21:22] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63340] logged in with entity id 13255 at (-32.5, 70.0, -32.5)
+[12:21:22] [Server thread/INFO]: collector4 joined the game
+[12:21:22] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63342] logged in with entity id 13256 at (-32.5, 70.0, -32.5)
+[12:21:22] [Server thread/INFO]: collector5 joined the game
+[12:21:22] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63334] logged in with entity id 13298 at (-32.5, 70.0, -32.5)
+[12:21:22] [Server thread/INFO]: collector1 joined the game
+[12:21:32] [Server thread/INFO]: [TheDevAtlas: Teleported 6 entities to TheDevAtlas]
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector2 moved too quickly! 17.11651822091551,3.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector5 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector4 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector1 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector2 moved too quickly! 17.11651822091551,3.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector5 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector4 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector1 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:32] [Server thread/WARN]: collector2 moved too quickly! 17.11651822091551,3.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector5 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector4 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector1 moved too quickly! 19.11651822091551,-2.0,90.64632943656707
+[12:21:32] [Server thread/WARN]: collector3 moved too quickly! 18.11651822091551,-1.0,89.64632943656707
+[12:21:36] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[12:21:36] [Server thread/INFO]: [Not Secure] <collector2> Collecting the nearest oak_log
+[12:21:36] [Server thread/INFO]: [Not Secure] <collector1> Collecting the nearest oak_log
+[12:21:36] [Server thread/INFO]: [Not Secure] <collector5> Collecting the nearest oak_log
+[12:21:36] [Server thread/INFO]: [Not Secure] <collector4> Collecting the nearest oak_log
+[12:21:36] [Server thread/INFO]: [Not Secure] <collector3> Collecting the nearest oak_log
+[12:21:44] [Server thread/INFO]: [TheDevAtlas: Teleported collector1 to TheDevAtlas]
+[12:21:48] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:21:48] [Server thread/INFO]: collector2 left the game
+[12:21:48] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:21:48] [Server thread/INFO]: collector1 left the game
+[12:21:48] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:21:48] [Server thread/INFO]: collector3 left the game
+[12:21:48] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:21:48] [Server thread/INFO]: collector4 left the game
+[12:21:48] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:21:48] [Server thread/INFO]: collector5 left the game
+[12:23:22] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63386] logged in with entity id 13501 at (-11.5, 69.0, 54.5)
+[12:23:22] [Server thread/INFO]: collector2 joined the game
+[12:23:22] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63388] logged in with entity id 13502 at (-11.307894202467045, 69.0, 54.5)
+[12:23:22] [Server thread/INFO]: collector3 joined the game
+[12:23:22] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63390] logged in with entity id 13503 at (-11.5, 69.0, 54.67675753563266)
+[12:23:22] [Server thread/INFO]: collector4 joined the game
+[12:23:22] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63392] logged in with entity id 13504 at (-11.5, 69.0, 54.67675753563266)
+[12:23:22] [Server thread/INFO]: collector5 joined the game
+[12:23:22] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63384] logged in with entity id 13505 at (-15.316417954899405, 68.0, 59.4041807901494)
+[12:23:22] [Server thread/INFO]: collector1 joined the game
+[12:23:32] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[12:23:32] [Server thread/INFO]: [Not Secure] <collector3> Collecting the nearest oak_log
+[12:23:32] [Server thread/INFO]: [Not Secure] <collector5> Collecting the nearest oak_log
+[12:23:32] [Server thread/INFO]: [Not Secure] <collector2> Collecting the nearest oak_log
+[12:23:32] [Server thread/INFO]: [Not Secure] <collector4> Collecting the nearest oak_log
+[12:23:32] [Server thread/INFO]: [Not Secure] <collector1> Collecting the nearest oak_log
+[12:23:39] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:23:39] [Server thread/INFO]: collector1 left the game
+[12:23:39] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:23:39] [Server thread/INFO]: collector2 left the game
+[12:23:39] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:23:39] [Server thread/INFO]: collector3 left the game
+[12:23:39] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:23:39] [Server thread/INFO]: collector4 left the game
+[12:23:39] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:23:39] [Server thread/INFO]: collector5 left the game
+[12:24:58] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63423] logged in with entity id 13662 at (-11.499987677102105, 69.0, 53.6850214547909)
+[12:24:58] [Server thread/INFO]: collector2 joined the game
+[12:24:58] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63425] logged in with entity id 13663 at (-11.461571440902876, 69.0, 53.69964245368731)
+[12:24:58] [Server thread/INFO]: collector3 joined the game
+[12:24:58] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63427] logged in with entity id 13664 at (-11.499984562448292, 69.0, 53.59477899967434)
+[12:24:58] [Server thread/INFO]: collector4 joined the game
+[12:24:58] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63429] logged in with entity id 13665 at (-11.499984562448292, 69.0, 53.59477899967434)
+[12:24:58] [Server thread/INFO]: collector5 joined the game
+[12:24:58] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63421] logged in with entity id 13666 at (-11.426119161397034, 69.0, 55.44213302600886)
+[12:24:58] [Server thread/INFO]: collector1 joined the game
+[12:25:04] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[12:25:04] [Server thread/INFO]: [Not Secure] <collector5> Collecting the nearest oak_log
+[12:25:04] [Server thread/INFO]: [Not Secure] <collector4> Collecting the nearest oak_log
+[12:25:04] [Server thread/INFO]: [Not Secure] <collector1> Collecting the nearest oak_log
+[12:25:04] [Server thread/INFO]: [Not Secure] <collector3> Collecting the nearest oak_log
+[12:25:04] [Server thread/INFO]: [Not Secure] <collector2> Collecting the nearest oak_log
+[12:25:23] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:25:23] [Server thread/INFO]: collector1 left the game
+[12:25:23] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:25:23] [Server thread/INFO]: collector2 left the game
+[12:25:23] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:25:23] [Server thread/INFO]: collector3 left the game
+[12:25:23] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:25:23] [Server thread/INFO]: collector4 left the game
+[12:25:23] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:25:23] [Server thread/INFO]: collector5 left the game
+[12:27:33] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63479] logged in with entity id 13923 at (-8.5, 69.0, 53.5)
+[12:27:33] [Server thread/INFO]: collector2 joined the game
+[12:27:33] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63481] logged in with entity id 13924 at (-8.426776562927044, 69.0, 51.44341905479661)
+[12:27:33] [Server thread/INFO]: collector3 joined the game
+[12:27:33] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63483] logged in with entity id 13925 at (-8.5, 69.0, 53.5)
+[12:27:33] [Server thread/INFO]: collector4 joined the game
+[12:27:33] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63485] logged in with entity id 13926 at (-7.5, 68.0, 53.5)
+[12:27:33] [Server thread/INFO]: collector5 joined the game
+[12:27:33] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63477] logged in with entity id 13927 at (-5.940700760864255, 69.0, 52.50144727280487)
+[12:27:33] [Server thread/INFO]: collector1 joined the game
+[12:27:37] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[12:27:37] [Server thread/INFO]: [Not Secure] <collector2> Collecting the nearest oak_log
+[12:27:37] [Server thread/INFO]: [Not Secure] <collector3> Collecting the nearest oak_log
+[12:27:37] [Server thread/INFO]: [Not Secure] <collector4> Collecting the nearest oak_log
+[12:27:37] [Server thread/INFO]: [Not Secure] <collector5> Collecting the nearest oak_log
+[12:27:37] [Server thread/INFO]: [Not Secure] <collector1> Collecting the nearest oak_log
+[12:27:47] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:27:47] [Server thread/INFO]: collector1 left the game
+[12:27:47] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:27:47] [Server thread/INFO]: collector2 left the game
+[12:27:47] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:27:47] [Server thread/INFO]: collector3 left the game
+[12:27:47] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:27:47] [Server thread/INFO]: collector4 left the game
+[12:27:47] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:27:47] [Server thread/INFO]: collector5 left the game
+[12:28:01] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63510] logged in with entity id 13966 at (-7.500024428653148, 68.0, 55.41011844351616)
+[12:28:01] [Server thread/INFO]: collector5 joined the game
+[12:28:01] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63502] logged in with entity id 13968 at (-4.498862181587438, 68.0, 55.5)
+[12:28:01] [Server thread/INFO]: collector1 joined the game
+[12:28:01] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63504] logged in with entity id 13969 at (-6.5, 68.0, 55.52385589262477)
+[12:28:01] [Server thread/INFO]: collector2 joined the game
+[12:28:01] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63506] logged in with entity id 13970 at (-5.50005982504374, 72.0, 55.5)
+[12:28:01] [Server thread/INFO]: collector3 joined the game
+[12:28:01] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63508] logged in with entity id 13971 at (-6.5, 68.0, 55.58117585693234)
+[12:28:01] [Server thread/INFO]: collector4 joined the game
+[12:28:08] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:28:08] [Server thread/INFO]: collector1 left the game
+[12:28:08] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:28:08] [Server thread/INFO]: collector2 left the game
+[12:28:08] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:28:08] [Server thread/INFO]: collector3 left the game
+[12:28:08] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:28:08] [Server thread/INFO]: collector4 left the game
+[12:28:08] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:28:08] [Server thread/INFO]: collector5 left the game
+[12:28:13] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63525] logged in with entity id 13993 at (-6.5, 68.0, 55.52385589262477)
+[12:28:13] [Server thread/INFO]: collector2 joined the game
+[12:28:13] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63529] logged in with entity id 13994 at (-6.5, 68.0, 55.58117585693234)
+[12:28:13] [Server thread/INFO]: collector4 joined the game
+[12:28:13] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63531] logged in with entity id 13995 at (-7.500024428653148, 68.0, 55.41011844351616)
+[12:28:13] [Server thread/INFO]: collector5 joined the game
+[12:28:13] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63523] logged in with entity id 13996 at (-4.498862181587438, 68.0, 55.5)
+[12:28:13] [Server thread/INFO]: collector1 joined the game
+[12:28:13] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63527] logged in with entity id 13997 at (-5.50005982504374, 72.0, 55.5)
+[12:28:13] [Server thread/INFO]: collector3 joined the game
+[12:28:17] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[12:28:17] [Server thread/INFO]: [Not Secure] <collector2> Collecting the nearest oak_log
+[12:28:17] [Server thread/INFO]: [Not Secure] <collector4> Collecting the nearest oak_log
+[12:28:17] [Server thread/INFO]: [Not Secure] <collector3> Collecting the nearest oak_log
+[12:28:17] [Server thread/INFO]: [Not Secure] <collector5> Collecting the nearest oak_log
+[12:28:17] [Server thread/INFO]: [Not Secure] <collector1> Collecting the nearest oak_log
+[12:28:32] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:28:32] [Server thread/INFO]: collector1 left the game
+[12:28:32] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:28:32] [Server thread/INFO]: collector2 left the game
+[12:28:32] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:28:32] [Server thread/INFO]: collector3 left the game
+[12:28:32] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:28:32] [Server thread/INFO]: collector4 left the game
+[12:28:32] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:28:32] [Server thread/INFO]: collector5 left the game
+[12:28:59] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:63552] logged in with entity id 14069 at (-6.517323381688325, 70.17675927506424, 53.44157037629805)
+[12:28:59] [Server thread/INFO]: collector2 joined the game
+[12:28:59] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:63554] logged in with entity id 14070 at (-6.5, 74.0, 53.49999083925492)
+[12:28:59] [Server thread/INFO]: collector3 joined the game
+[12:28:59] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:63556] logged in with entity id 14071 at (-4.885676408897014, 72.49520087700593, 55.3)
+[12:28:59] [Server thread/INFO]: collector4 joined the game
+[12:28:59] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:63558] logged in with entity id 14072 at (-5.71159171222396, 71.0, 53.755768691105985)
+[12:28:59] [Server thread/INFO]: collector5 joined the game
+[12:29:00] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:63550] logged in with entity id 14073 at (-4.499695293795325, 69.0, 52.5)
+[12:29:00] [Server thread/INFO]: collector1 joined the game
+[12:29:01] [Server thread/INFO]: [Not Secure] <TheDevAtlas> collect oak_log
+[12:29:02] [Server thread/INFO]: [Not Secure] <collector1> Collecting the nearest oak_log
+[12:29:02] [Server thread/INFO]: [Not Secure] <collector5> Collecting the nearest oak_log
+[12:29:02] [Server thread/INFO]: [Not Secure] <collector4> Collecting the nearest oak_log
+[12:29:03] [Server thread/INFO]: [Not Secure] <collector3> Collecting the nearest oak_log
+[12:29:03] [Server thread/INFO]: [Not Secure] <collector2> Collecting the nearest oak_log
+[12:29:18] [Server thread/INFO]: collector2 lost connection: Disconnected
+[12:29:18] [Server thread/INFO]: collector2 left the game
+[12:29:18] [Server thread/INFO]: collector1 lost connection: Disconnected
+[12:29:18] [Server thread/INFO]: collector1 left the game
+[12:29:18] [Server thread/INFO]: collector3 lost connection: Disconnected
+[12:29:18] [Server thread/INFO]: collector3 left the game
+[12:29:18] [Server thread/INFO]: collector4 lost connection: Disconnected
+[12:29:18] [Server thread/INFO]: collector4 left the game
+[12:29:18] [Server thread/INFO]: collector5 lost connection: Disconnected
+[12:29:18] [Server thread/INFO]: collector5 left the game
+[15:10:53] [Server thread/INFO]: collector2[/[0:0:0:0:0:0:0:1]:65219] logged in with entity id 26628 at (-8.567516628938074, 69.0, 52.454101256448055)
+[15:10:53] [Server thread/INFO]: collector2 joined the game
+[15:10:53] [Server thread/INFO]: collector3[/[0:0:0:0:0:0:0:1]:65221] logged in with entity id 26629 at (-8.5, 75.0, 53.499964059778115)
+[15:10:53] [Server thread/INFO]: collector3 joined the game
+[15:10:53] [Server thread/INFO]: collector4[/[0:0:0:0:0:0:0:1]:65223] logged in with entity id 26630 at (-7.555204935991239, 69.0, 51.36230698141004)
+[15:10:53] [Server thread/INFO]: collector4 joined the game
+[15:10:53] [Server thread/INFO]: collector5[/[0:0:0:0:0:0:0:1]:65225] logged in with entity id 26631 at (-9.12499942709192, 69.0, 50.08627787139367)
+[15:10:53] [Server thread/INFO]: collector5 joined the game
+[15:10:53] [Server thread/INFO]: collector1[/[0:0:0:0:0:0:0:1]:65217] logged in with entity id 26643 at (-2.5, 69.0, 50.5)
+[15:10:53] [Server thread/INFO]: collector1 joined the game
+[15:13:24] [Server thread/INFO]: TheDevAtlas lost connection: Disconnected
+[15:13:24] [Server thread/INFO]: TheDevAtlas left the game
+[15:13:28] [Server thread/INFO]: collector2 lost connection: Disconnected
+[15:13:28] [Server thread/INFO]: collector2 left the game
+[15:13:28] [Server thread/INFO]: collector1 lost connection: Disconnected
+[15:13:28] [Server thread/INFO]: collector1 left the game
+[15:13:28] [Server thread/INFO]: collector3 lost connection: Disconnected
+[15:13:28] [Server thread/INFO]: collector3 left the game
+[15:13:28] [Server thread/INFO]: collector4 lost connection: Disconnected
+[15:13:28] [Server thread/INFO]: collector4 left the game
+[15:13:28] [Server thread/INFO]: collector5 lost connection: Disconnected
+[15:13:28] [Server thread/INFO]: collector5 left the game
