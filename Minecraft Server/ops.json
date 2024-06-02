@@ -10,5 +10,11 @@
     "name": "TheDevAtlas",
     "level": 4,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "d5674561-9a84-3349-a259-c0679bb0ec0c",
+    "name": "collector1",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
