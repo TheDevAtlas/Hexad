@@ -2,7 +2,7 @@ const mineflayer = require('mineflayer')
 
 // Choose a short Greek god name
 const name = 'Zeus'
-const dropItem = true;
+const dropItem = false;
 
 const bot = mineflayer.createBot({
   host: 'localhost', // Change to your server IP if needed
@@ -21,7 +21,7 @@ function findNearestCraftingTable() {
   const craftingTableId = mcData.blocksByName.crafting_table.id
   const block = bot.findBlock({
     matching: craftingTableId,
-    maxDistance: 6
+    maxDistance: 16
   })
   return block
 }
@@ -109,6 +109,55 @@ async function craftItem(itemName, count) {
   }
 }
 
+// Mine item function
+async function mineItem(itemName, count) {
+  const mcData = require('minecraft-data')(bot.version)
+  const blockData = mcData.blocksByName[itemName]
+  if (!blockData) {
+    bot.chat(`Unknown block: ${itemName}`)
+    return
+  }
+  // Ensure pathfinder plugin is loaded
+  if (!bot.pathfinder) {
+    const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
+    bot.loadPlugin(pathfinder)
+  }
+  const { Movements, goals } = require('mineflayer-pathfinder')
+  const movements = new Movements(bot, mcData)
+  bot.pathfinder.setMovements(movements)
+
+  let mined = 0
+  let mining = false
+
+  async function mineNext() {
+    if (mined >= count) {
+      bot.chat(`Mined ${mined} ${itemName}`)
+      return
+    }
+    // Find nearest block
+    const block = bot.findBlock({
+      matching: blockData.id,
+      maxDistance: 32
+    })
+    if (!block) {
+      bot.chat(`No ${itemName} nearby!`)
+      return
+    }
+    mining = true
+    try {
+      await bot.pathfinder.goto(new goals.GoalBlock(block.position.x, block.position.y, block.position.z))
+      await bot.dig(block)
+      mined++
+      mining = false
+      setTimeout(mineNext, 300) // Small delay to allow block updates
+    } catch (err) {
+      bot.chat(`Failed to mine ${itemName}: ${err.message}`)
+      mining = false
+    }
+  }
+  mineNext()
+}
+
 // Listen for chat messages and craft requested items
 bot.on('chat', async (username, message) => {
   if (username === bot.username) return // Ignore bot's own messages
@@ -118,6 +167,13 @@ bot.on('chat', async (username, message) => {
     const itemName = parts[1]
     const count = parts.length > 2 && !isNaN(Number(parts[2])) ? Number(parts[2]) : 1
     await craftItem(itemName, count)
+    return
+  }
+  // Check for 'mine' command
+  if (parts[0].toLowerCase() === 'mine' && parts.length >= 2) {
+    const itemName = parts[1]
+    const count = parts.length > 2 && !isNaN(Number(parts[2])) ? Number(parts[2]) : 1
+    await mineItem(itemName, count)
     return
   }
 })
