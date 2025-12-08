@@ -15,6 +15,17 @@ bot.once('spawn', () => {
   bot.chat(`Hello, I am ${name}`)
 })
 
+// Find nearest crafting table block
+function findNearestCraftingTable() {
+  const mcData = require('minecraft-data')(bot.version)
+  const craftingTableId = mcData.blocksByName.crafting_table.id
+  const block = bot.findBlock({
+    matching: craftingTableId,
+    maxDistance: 6
+  })
+  return block
+}
+
 // Craft item function
 async function craftItem(itemName, count) {
   const mcData = require('minecraft-data')(bot.version)
@@ -23,13 +34,65 @@ async function craftItem(itemName, count) {
     bot.chat(`Unknown item: ${itemName}`)
     return
   }
-  const recipes = bot.recipesFor(item.id, null, count, null)
+  let craftingTable = null
+  let recipes = bot.recipesFor(item.id, null, count, null)
+  // If no recipe found, try with crafting table
   if (recipes.length === 0) {
-    bot.chat(`No recipe found for ${itemName}`)
-    return
+    craftingTable = findNearestCraftingTable()
+    if (!craftingTable) {
+      bot.chat('No crafting table nearby!')
+      return
+    }
+    recipes = bot.recipesFor(item.id, null, count, craftingTable)
+    if (recipes.length === 0) {
+      bot.chat(`No recipe found for ${itemName}`)
+      return
+    }
+  }
+  const recipe = recipes[0]
+  // If recipe requires table, make sure we have one
+  if (recipe.requiresTable) {
+    craftingTable = findNearestCraftingTable()
+    if (!craftingTable) {
+      bot.chat('No crafting table nearby!')
+      return
+    }
+  } else {
+    craftingTable = null
   }
   try {
-    await bot.craft(recipes[0], count, null)
+    // Move bot to crafting table if needed
+    if (craftingTable) {
+      // Ensure pathfinder plugin is loaded
+      if (!bot.pathfinder) {
+        const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
+        bot.loadPlugin(pathfinder)
+      }
+      const { Movements, goals } = require('mineflayer-pathfinder')
+      const mcData = require('minecraft-data')(bot.version)
+      const movements = new Movements(bot, mcData)
+      bot.pathfinder.setMovements(movements)
+      // Find a safe adjacent position next to the crafting table
+      const pos = craftingTable.position
+      const offsets = [
+        { x: 1, y: 0, z: 0 },
+        { x: -1, y: 0, z: 0 },
+        { x: 0, y: 0, z: 1 },
+        { x: 0, y: 0, z: -1 }
+      ]
+      let targetPos = null
+      for (const offset of offsets) {
+        const checkPos = pos.offset(offset.x, offset.y, offset.z)
+        const block = bot.blockAt(checkPos)
+        if (block && block.boundingBox === 'block' && block.name === 'air') {
+          targetPos = checkPos
+          break
+        }
+      }
+      if (!targetPos) targetPos = pos.offset(1, 0, 0) // fallback
+      await bot.pathfinder.goto(new goals.GoalBlock(targetPos.x, targetPos.y, targetPos.z))
+    }
+    await bot.craft(recipe, count, craftingTable)
     const craftedItem = bot.inventory.items().find(i => i.name === itemName)
     if (craftedItem) {
       if (dropItem) {
